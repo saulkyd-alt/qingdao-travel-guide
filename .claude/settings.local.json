@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills *)",
+      "WebFetch(domain:skills.sh)",
+      "Bash(git clone *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(rm -rf /tmp/inference-skills && git clone --depth 1 https://github.com/inference-sh-skills/skills.git /tmp/inference-skills 2>&1)",
+      "Bash(SKILLS_CLONE_TIMEOUT_MS=600000 npx skills add inference-sh-skills/skills@ai-image-generation -g -y)",
+      "Bash(curl -L -o \"/Users/jinzhiwei/Desktop/cc/上海美食图片/shanghai-noodles.jpg\" \"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800\")",
+      "Bash(curl -L -o \"/Users/jinzhiwei/Desktop/cc/上海美食图片/shanghai-dumplings.jpg\" \"https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800\")",
+      "Bash(curl -L -o \"/Users/jinzhiwei/Desktop/cc/上海美食图片/shanghai-night-market.jpg\" \"https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=800\")"
+    ],
+    "additionalDirectories": [
+      "/private/tmp/inference-skills"
+    ]
+  }
+}

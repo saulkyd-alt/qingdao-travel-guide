@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青岛 · 闺蜜3天2晚旅游攻略 v3.0</title>
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "SF Pro Display", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 28px auto;
+  background: #fff;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+}
+
+/* ===== COVER ===== */
+.cover {
+  position: relative;
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.cover img {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.cover-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(160deg, rgba(10,35,66,0.82) 0%, rgba(20,80,130,0.55) 40%, rgba(0,0,0,0.25) 100%);
+  z-index: 1;
+}
+.cover-content { position: relative; z-index: 2; text-align: center; padding: 40px; }
+
+.cover-badge {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.12);
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.cover h1 {
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  line-height: 1.15;
+}
+.cover h1 span { color: #7ec8e3; }
+.cover .subtitle {
+  font-size: 17px;
+  opacity: 0.9;
+  margin: 16px 0 36px;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+.cover-stat {
+  background: rgba(255,255,255,0.13);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 14px 10px;
+  border-radius: 12px;
+}
+.cover-stat .l { font-size: 11px; opacity: 0.7; margin-bottom: 4px; }
+.cover-stat .v { font-size: 17px; font-weight: 600; }
+
+.cover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.cover-tags span {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+}
+
+.cover-quote {
+  font-size: 15px;
+  opacity: 0.8;
+  letter-spacing: 4px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 28px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 28px;
+  font-size: 11px;
+  opacity: 0.5;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* ===== INNER PAGES ===== */
+.page-content { padding: 14mm 20mm; }
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a90c4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section-number::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #4a90c4;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a2342;
+  letter-spacing: -0.3px;
+  margin: 8px 0 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a5276;
+  margin: 24px 0 12px;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, #d0dce8, transparent);
+  margin: 28px 0;
+}
+
+/* ===== IMAGE CARDS ===== */
+.img-card {
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: relative;
+}
+.img-card img { width: 100%; display: block; }
+.img-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 30px 18px 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+.img-label .credit {
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-left: 8px;
+}
+
+.img-row {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+.img-row .img-card { flex: 1; margin: 0; }
+.img-row .img-card img { height: 150px; object-fit: cover; }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 16px 0;
+  font-size: 12.5px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+th {
+  background: #0a2342;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #eef2f7;
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #f8fafc; }
+
+/* ===== DAY HEADER ===== */
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  margin: 24px 0 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.day-1 { background: linear-gradient(135deg, #e8f0fe, #f0f5ff); color: #1a5276; border-left: 4px solid #2d6a9f; }
+.day-2 { background: linear-gradient(135deg, #e6f7f0, #f0fdf6); color: #1a6e4a; border-left: 4px solid #27ae60; }
+.day-3 { background: linear-gradient(135deg, #fef3e6, #fff8f0); color: #8a6d1a; border-left: 4px solid #f39c12; }
+
+/* ===== INFO CARDS ===== */
+.info-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.info-card .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.info-tip {
+  background: #f0f7fe;
+  border: 1px solid #d6e8f8;
+}
+.info-warn {
+  background: #fef6f0;
+  border: 1px solid #fce4d6;
+}
+
+/* ===== FOOD CARDS ===== */
+.food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+.food-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fafbfd;
+  border: 1px solid #eef0f4;
+  font-size: 12.5px;
+}
+.food-item .name { font-weight: 600; color: #0a2342; }
+.food-item .price { color: #e74c3c; font-weight: 500; font-size: 12px; margin-left: 6px; }
+.food-item .desc { color: #666; font-size: 12px; margin-top: 2px; }
+
+/* ===== HOTEL CARDS ===== */
+.hotel-list { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+.hotel-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #eef0f4;
+  background: #fafbfd;
+}
+.hotel-item .thumb {
+  width: 90px;
+  min-height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hotel-item .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.hotel-item .info { flex: 1; }
+.hotel-item .info h4 { font-size: 14px; font-weight: 600; color: #0a2342; margin-bottom: 2px; }
+.hotel-item .info .price { color: #e74c3c; font-weight: 600; font-size: 13px; }
+.hotel-item .info .desc { font-size: 12px; color: #777; margin-top: 3px; line-height: 1.5; }
+
+/* ===== PHOTO SPOTS ===== */
+.spot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.spot-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eef0f4;
+  transition: all 0.2s;
+}
+.spot-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+.spot-body { padding: 10px 12px; }
+.spot-body .name { font-size: 13px; font-weight: 600; color: #0a2342; }
+.spot-body .tip { font-size: 11px; color: #999; margin-top: 2px; }
+
+/* ===== BUDGET ===== */
+.budget-list { margin: 12px 0; }
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e8ecf0;
+  font-size: 13px;
+}
+.budget-row:last-child { border-bottom: none; }
+.budget-row .label { color: #555; }
+.budget-row .amount { font-weight: 600; color: #0a2342; }
+.budget-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a2342;
+  border-top: 2px solid #0a2342;
+  margin-top: 4px;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; margin: 12px 0; }
+.checklist li {
+  font-size: 12.5px;
+  padding: 4px 0;
+  list-style: none;
+  color: #444;
+}
+.checklist li::before { content: '☐ '; color: #4a90c4; font-weight: 600; }
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* ===== TWO COL ===== */
+.two-col { display: flex; gap: 24px; }
+.two-col > div { flex: 1; }
+
+/* ===== SECTION TAGS ===== */
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.tag-new { background: #e8f0fe; color: #1a5276; }
+.tag-hot { background: #fef3e6; color: #b7950b; }
+.tag-deal { background: #e6f7e6; color: #1e8449; }
+
+/* ===== SECTION LABEL ===== */
+.section-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #8aa4bc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+/* ===== TIPS SECTION ===== */
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+.tip-box {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.tip-box strong { display: block; margin-bottom: 3px; font-size: 13px; }
+.tip-green { background: #f0faf5; border: 1px solid #d4ece0; }
+.tip-red { background: #fef6f0; border: 1px solid #fce4d6; }
+
+/* ===== FOOTER ===== */
+.page-footer {
+  margin-top: 28px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #4a6a8a;
+}
+
+@media print {
+  .page { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1: COVER ===== -->
+<div class="page">
+  <div class="cover">
+    <img src="images/qd-scenery-1.jpg" alt="">
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+      <div class="cover-badge">2026 · 端午小长假</div>
+
+      <h1>青岛<br><span>闺蜜3天2晚</span></h1>
+      <p class="subtitle">上海出发 × 苏州出发</p>
+
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <div class="l">日期</div>
+          <div class="v">6/19 — 6/21</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">交通</div>
+          <div class="v">4.5 ~ 5.5h</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">人均预算</div>
+          <div class="v">¥1,500~2,200</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">定位</div>
+          <div class="v">松弛治愈</div>
+        </div>
+      </div>
+
+      <div class="cover-tags">
+        <span>🌊 看海踱步</span>
+        <span>📸 闺蜜出片</span>
+        <span>🍺 海鲜啤酒</span>
+        <span>🧘 松弛治愈</span>
+        <span>🏛 万国建筑</span>
+      </div>
+
+      <p class="cover-quote">红瓦绿树 · 碧海蓝天 · 袋装啤酒 · 闺蜜看海</p>
+    </div>
+
+    <p class="cover-footer">攻略版本 v3.0 · 2026年5月整理 · 配图：维基共享资源 / Unsplash</p>
+  </div>
+</div>
+
+<!-- ===== PAGE 2: TRANSPORT + DAY 1 ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">交通方案</div>
+    <h2>出发与碰头</h2>
+
+    <table>
+      <tr><th style="width:25%;">出发地</th><th style="width:20%;">用时</th><th>说明</th></tr>
+      <tr><td>上海 → 青岛</td><td>约 4.5~5h</td><td>高铁直达青岛站/青岛北站，二等座约 ¥250~330</td></tr>
+      <tr><td>苏州 → 青岛</td><td>约 4~5h</td><td>经上海/南京中转或直达，二等座约 ¥300~400</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">💡</span>
+      <div><strong>碰头方案</strong> — 青岛站/青岛北站站内汇合，再一起打车去市区（约 20~30 分钟）。建议买早班车（8:00-9:00 发车），中午前后到达，下午直接开玩。</div>
+    </div>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="images/qd-scenery-2.jpg" alt="">
+        <div class="img-label">🏖 青岛海岸线 · 红瓦绿树碧海蓝天</div>
+      </div>
+      <div class="img-card">
+        <img src="images/qd-scenery-1.jpg" alt="">
+        <div class="img-label">🌅 海滨之城 · 万国建筑博览会</div>
+      </div>
+      <div class="img-card">
+        <img src="images/qd-scenery-5.jpg" alt="">
+        <div class="img-label">🌆 五四广场 · 青岛新地标</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">Day 1 · 6/19 周五</div>
+    <h2>抵达 + 老城漫步 + 台东夜市</h2>
+
+    <div class="img-card">
+      <img src="images/qd-scenery-4.jpg" alt="">
+      <div class="img-label">信号山俯瞰 · 青岛老城红瓦绿树全景</div>
+    </div>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>中午</td><td>各自高铁出发 → 青岛站碰头</td><td>🚄 轻松</td></tr>
+      <tr><td>14:00</td><td>到酒店办入住，休息一下</td><td>🛏 躺平</td></tr>
+      <tr><td>15:30</td><td>🍜 大学路 + 龙江路逛吃 — 不舍昼夜咖啡馆、宫崎骏墙绘、红墙拍照</td><td>📸 拍照</td></tr>
+      <tr><td>17:00</td><td>⛰ 信号山/小鱼山 — 俯瞰红瓦绿树全景，10分钟登顶，门票 ¥15</td><td>🌇 傍晚最佳</td></tr>
+      <tr><td>18:30</td><td>🌆 栈桥吹海风 → 琴屿路看日落 — S弯+礁石+晚霞，风陵渡口咖啡馆</td><td>📸 超出片</td></tr>
+      <tr><td>20:00</td><td>🌙 台东夜市 — 辣炒蛤蜊、烤鱿鱼、袋装鲜啤 ¥4/斤、海菜凉粉</td><td>🍺 美食</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">📸</span>
+      <div><strong>拍照小贴士：</strong> 琴屿路日落前1小时到，穿浅色长裙，逆光拍"发丝发光"效果。风陵渡口咖啡馆窗边位需要排队，建议一人占位一人去点单。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 3: DAY 2 + DAY 3 ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">Day 2 · 6/20 周六</div>
+    <h2>滨海追光 + 海鲜自由</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="images/qd-scenery-6.jpg" alt="">
+        <div class="img-label">🌊 金沙滩 · 踩沙赶海好去处</div>
+      </div>
+      <div class="img-card">
+        <img src="images/qd-scenery-1.jpg" alt="">
+        <div class="img-label">🏛 灯塔远眺 · 海岸线风光</div>
+      </div>
+    </div>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>自然醒</td><td>酒店周边吃个早饭</td><td>😴 睡到饱</td></tr>
+      <tr><td>10:00</td><td>🏛 八大关 — 花石楼、公主楼，林荫道骑自行车慢慢拍</td><td>📸 复古大片</td></tr>
+      <tr><td>12:00</td><td>🍜 午餐 — 双合园海鲜水饺（上清路店）或 民国海饺子楼（栈桥店）</td><td>🦐 人均¥60~91</td></tr>
+      <tr><td>14:00</td><td>🏖 第二海水浴场 — 踩沙、赶海、《悲伤逆流成河》同款网红洞</td><td>🌊 轻松</td></tr>
+      <tr><td>16:00</td><td>🌿 小麦岛 — 草坪+海岸线+孤独树，听街头歌手驻唱</td><td>📸 日落氛围</td></tr>
+      <tr><td>18:30</td><td>⛵ 五四广场 + 奥帆中心 — 情人坝赏日落，晚上7:30灯光秀</td><td>🌆 浪漫</td></tr>
+      <tr><td>20:00</td><td>🦐 营口路海鲜市场 — 自己挑海鲜，啤酒屋加工（清蒸¥5-15/斤）或 前海沿（永旺店）</td><td>🍺 人均¥67</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">🎯</span>
+      <div><strong>周六限定彩蛋：</strong> 石老人日出（清晨5:00左右）— 如果你们起得来！导航「花神书咖」，日出前30分钟到，拍剪影绝了。看完回酒店补觉。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">Day 3 · 6/21 周日</div>
+    <h2>崂山 / 西海岸 + 返程</h2>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>自然醒</td><td>退房，行李寄存前台</td><td>😴 睡到饱</td></tr>
+      <tr><td>9:00</td><td>⛰ 崂山（太清宫/仰口）或 西海岸影都后街灯光节</td><td>⛰ 二选一</td></tr>
+      <tr><td>12:00</td><td>🍜 午餐 — 青山渔村农家宴 / 西海岸海鲜</td><td>🦐 美食</td></tr>
+      <tr><td>14:00</td><td>🛍 最后一站：啤酒博物馆（送原浆+啤酒豆）或纺织谷逛街</td><td>🎁 伴手礼</td></tr>
+      <tr><td>16:00</td><td>回酒店取行李 → 青岛站 → 各回各家 🏠</td><td>🚄 返程</td></tr>
+    </table>
+
+    <div class="img-card">
+      <img src="images/qd-beer-new.jpg" alt="">
+      <div class="img-label">🍺 青岛啤酒博物馆 · 百年青啤文化</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 4: NEW SPOTS + HOTELS ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">2026 新亮点</div>
+    <h2>青岛今年有新玩法</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="images/qd-scenery-2.jpg" alt="">
+        <div class="img-label">🎬 影都后街灯光艺术节</div>
+      </div>
+      <div class="img-card">
+        <img src="images/qd-scenery-8.jpg" alt="">
+        <div class="img-label">🏭 工业风 Citywalk</div>
+      </div>
+      <div class="img-card">
+        <img src="images/qd-scenery-7.jpg" alt="">
+        <div class="img-label">🏔 奇幻山海间 2.0</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0;">
+      <div class="info-card info-tip">
+        <span class="icon">🎬</span>
+        <div>
+          <strong>影都后街（西海岸新区）</strong> <span class="tag tag-new">2026全新开放</span><br>
+          北方首例巨型智能天幕伞「西海云朵」、月光树、沉浸式光影步道。首届灯光艺术节持续至5月底，傍晚出发最合适。有"住宿+演出票"套餐。
+        </div>
+      </div>
+      <div class="info-card info-tip">
+        <span class="icon">🏭</span>
+        <div>
+          <strong>工业风Citywalk</strong> <span class="tag tag-hot">五一爆火</span><br>
+          纺织谷（国棉五厂百年包豪斯厂房）→ 中车四方智汇港（蒸汽机车+XR体验）→ 能源·心动里（老供热站变潮流公园）。古着店+涂鸦+咖啡，拍照超出片。
+        </div>
+      </div>
+      <div class="info-card info-tip">
+        <span class="icon">🏔</span>
+        <div>
+          <strong>奇幻山海间2.0（城阳区）</strong> <span class="tag tag-deal">早鸟票¥20起</span><br>
+          全时段运营（10:00-22:00），60元一票畅玩。新增具身智能体验馆、球幕影院、太空舱露营、跑酷基地、国际大马戏。
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">住宿</div>
+    <h2>推荐入住</h2>
+
+    <div class="hotel-list">
+      <div class="hotel-item">
+        <div class="thumb"><img src="images/qd-scenery-5.jpg" alt=""></div>
+        <div class="info">
+          <h4><a href="https://www.dianping.com/shop/HavDMizoWfEM7y1k" target="_blank" style="color:#0a2342;text-decoration:none;">伊美萝薇海景别墅（八大关景区店）↗</a></h4>
+          <div class="price">¥300~500 / 晚</div>
+          <div class="desc">一线海景，顶楼观景露台视野绝佳，自带咖啡馆，有超可爱柴犬 🐕 评分4.8</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="images/qd-scenery-6.jpg" alt=""></div>
+        <div class="info">
+          <h4>院里有海Meeting·度假民宿（崂山流清河沙滩）</h4>
+          <div class="price">¥400~600 / 晚</div>
+          <div class="desc">2025新开业 · 评分4.9。出门就是沙滩，全景落地窗+巨幕影院，地中海风白墙绿植</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="images/qd-scenery-2.jpg" alt=""></div>
+        <div class="info">
+          <h4><a href="https://www.dianping.com/shop/l7Id3hBx1BISA7r5" target="_blank" style="color:#0a2342;text-decoration:none;">仰川设计师海景私汤民宿（崂山仰口）↗</a></h4>
+          <div class="price">¥500~800 / 晚</div>
+          <div class="desc">侘寂风设计，270°海景+私汤入户，顶楼360°观景台，适合品质闺蜜团</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="images/qd-scenery-3.jpg" alt=""></div>
+        <div class="info">
+          <h4>如家精选 / 全季（五四广场/栈桥店）</h4>
+          <div class="price">¥200~350 / 晚</div>
+          <div class="desc">连锁品牌品质稳定，位置便利，步行到海边，预算友好之选</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">📍</span>
+      <div><strong>推荐住栈桥/八大关/五四广场周边</strong> — 去哪都近，晚上出门逛吃方便。想躺平看海选崂山民宿，想逛街方便住五四广场，想文艺住大学路。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 5: FOOD ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">美食</div>
+    <h2>餐厅推荐 · 大众点评高分认证</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="images/food-dish-1.jpg" alt="">
+        <div class="img-label">🦐 捞汁小海鲜 · 鲜甜入味</div>
+      </div>
+      <div class="img-card">
+        <img src="images/food-dish-2.jpg" alt="">
+        <div class="img-label">🦀 香辣蟹拌面 · 每根面都入味</div>
+      </div>
+      <div class="img-card">
+        <img src="images/food-dish-3.jpg" alt="">
+        <div class="img-label">🍺 青岛啤酒 · 袋装原浆</div>
+      </div>
+    </div>
+
+    <!-- 饺子类 -->
+    <h3>🥟 海鲜水饺 · 青岛美食名片</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/HarBeoxyDxhGL34X" target="_blank" style="color:#0a2342;text-decoration:none;">双合园·海鲜水饺（上清路店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 上清路12号 · 人均¥91 · 10770条评价 · 海鲜全家福水饺（海胆/鲅鱼/墨鱼）、岭南大排、虾饼</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/H9gaqhURdlSfI3Aj" target="_blank" style="color:#0a2342;text-decoration:none;">船歌·鱼水饺（万象城店）⭐4.0 ↗</a></div>
+        <div class="desc">📍 万象城 · 人均¥95 · 23159条评价 · 墨鱼水饺、黄花鱼水饺、全家福饺子宴</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/l8QI8QwbdsBbm9pI" target="_blank" style="color:#0a2342;text-decoration:none;">民国海海鲜饺子楼（中山路栈桥店）⭐4.8 ↗</a></div>
+        <div class="desc">📍 中山路31号 · 人均¥60 · 22480条评价 · 海肠捞饭、海鲜饺子全家福，近栈桥！</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/H1HORpMehKs9MRXL" target="_blank" style="color:#0a2342;text-decoration:none;">开海·红岛海鲜虾水饺（八大关店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 八大关 · 人均¥116 · 18313条评价 · 精致虾水饺，逛完八大关直接去吃</div>
+      </div>
+    </div>
+
+    <!-- 海鲜正餐 -->
+    <h3>🦐 海鲜正餐 · 本地人排队吃</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/l34ZV8kuhi5whegd" target="_blank" style="color:#0a2342;text-decoration:none;">前海沿·海鲜水饺青岛菜（五四广场永旺店）⭐4.5 ↗</a></div>
+        <div class="desc">📍 香港中路永旺2层 · 人均¥67 · 32783条评价 · 央视推荐！海肠捞饭、香酥鸡</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/l4ljDq1RVjv16AQz" target="_blank" style="color:#0a2342;text-decoration:none;">出海·小船海鲜（五四广场店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 五四广场 · 人均¥95 · 11117条评价 · 新鲜小海鲜，性价比高</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/iBYvvKuobtgICEoo" target="_blank" style="color:#0a2342;text-decoration:none;">海港甄宴•海鲜（石老人店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 石老人 · 人均¥151 · 6345条评价 · 崂山脚下，茉莉花熏鳕鱼绝了</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/laGeiCed5NIjSBjS" target="_blank" style="color:#0a2342;text-decoration:none;">靓湾海鲜·海景餐厅（小麦岛店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 小麦岛 · 人均¥126 · 2847条评价 · 海景餐厅，逛小麦岛顺路吃</div>
+      </div>
+    </div>
+
+    <!-- 高端/特色 -->
+    <h3>💎 必体验 & 黑珍珠</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/k78mAdPDngToda4w" target="_blank" style="color:#0a2342;text-decoration:none;">怡情荟•海鲜青岛菜（五四广场旗舰店）⭐5.0 ↗</a></div>
+        <div class="desc">📍 五四广场 · 人均¥358 · 青岛首批黑珍珠一钻！活海肠水饺、大虾烧白菜</div>
+      </div>
+      <div class="food-item">
+        <div class="name"><a href="https://www.dianping.com/shop/l84xA1wabRnhQx5Z" target="_blank" style="color:#0a2342;text-decoration:none;">吕氏焗小鲜·海鲜（五四广场总店）⭐4.5 ↗</a></div>
+        <div class="desc">📍 澄海一路24号 · 人均¥73 · 近30年老店！砂锅焗鳗鱼蹄筋、海肠捞饭</div>
+      </div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">💡</span>
+      <div><strong>省钱攻略：</strong> 去营口路市场、团岛市场买活海鲜（价格比餐厅低50%），找附近啤酒屋加工（清蒸¥5~15/斤）<br>
+      ⚠ 别去景区门口大排档。肠胃弱的姐妹带点肠胃药。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <h3>🍵 本地特色饮品</h3>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">崂山可乐</div>
+          <div class="desc">加了红枣白芷等中药，跟普通可乐不一样</div>
+        </div>
+        <div class="food-item">
+          <div class="name">崂山白花蛇草水</div>
+          <div class="desc">网红"神水"，建议买一瓶尝尝（别买多了😂）</div>
+        </div>
+      </div>
+      <div>
+        <h3>🎁 伴手礼</h3>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">崂李家脂渣</div>
+          <div class="desc">纯瘦猪肉脂渣，香脆可口</div>
+        </div>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">青岛啤酒啤酒豆</div>
+          <div class="desc">啤酒博物馆同款</div>
+        </div>
+        <div class="food-item">
+          <div class="name">海产品干货</div>
+          <div class="desc">干贝、虾皮、鱿鱼丝，方便携带</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 6: PHOTO SPOTS + BUDGET ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">拍照</div>
+    <h2>闺蜜机位 TOP 7</h2>
+
+    <div class="img-card">
+      <img src="images/qd-scenery-3.jpg" alt="">
+      <div class="img-label">📷 八大关林荫道 · 每一步都是风景</div>
+    </div>
+
+    <div class="spot-grid">
+      <div class="spot-card">
+        <img src="images/qd-scenery-4.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">⛰ 信号山后山</div>
+          <div class="tip">龙山路入口免费 · 俯瞰全景 · 下午4-5点</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-3.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏛 八大关林荫道</div>
+          <div class="tip">紫藤小路 · 复古碎花裙出片 · 上午10点</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-1.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🌿 小麦岛草坪</div>
+          <div class="tip">孤独树+日落 · 下午4点到 · 天空占2/3</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-5.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🌊 五四广场 + 奥帆中心</div>
+          <div class="tip">情人坝日落 · 晚上7:30灯光秀</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-7.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏗 西陵峡一路</div>
+          <div class="tip">宫崎骏漫画感公路 · 人少景美</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-1.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏖 第二海水浴场</div>
+          <div class="tip">《悲伤逆流成河》同款海堤 · 网红洞</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="images/qd-scenery-2.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏭 纺织谷</div>
+          <div class="tip">包豪斯厂房+涂鸦街区 · 工业风大片</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">👗</span>
+      <div><strong>穿搭建议：</strong> 浅色连衣裙+草帽+帆布鞋。老城穿复古碎花裙，海边穿白裙。首推新中式/复古风！带一件薄外套，海风早晚偏凉。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <div class="section-number">预算</div>
+        <h2>费用估算</h2>
+        <div class="budget-list">
+          <div class="budget-row"><span class="label">🚄 往返高铁</span><span class="amount">¥500 ~ 700</span></div>
+          <div class="budget-row"><span class="label">🏨 住宿2晚（双床房平摊）</span><span class="amount">¥300 ~ 600</span></div>
+          <div class="budget-row"><span class="label">🍜 吃饭3天</span><span class="amount">¥400 ~ 600</span></div>
+          <div class="budget-row"><span class="label">🎫 门票</span><span class="amount">¥60 ~ 120</span></div>
+          <div class="budget-row"><span class="label">🚕 市内交通</span><span class="amount">¥100 ~ 200</span></div>
+          <div class="budget-total"><span>合计（人均）</span><span>¥1,500 ~ 2,200</span></div>
+        </div>
+        <p style="font-size:11px;color:#999;margin-top:4px;">丰俭由人 · 不含购物</p>
+      </div>
+      <div>
+        <div class="section-number">清单</div>
+        <h2>行前准备</h2>
+        <ul class="checklist">
+          <li>身份证</li>
+          <li>防晒霜 ⭐</li>
+          <li>帽子 + 墨镜</li>
+          <li>薄外套</li>
+          <li>防滑沙滩鞋</li>
+          <li>充电宝</li>
+          <li>肠胃药</li>
+          <li>平底鞋</li>
+          <li>学生证（有的话）</li>
+          <li>晕船药</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 7: GALLERY + TIPS ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">Gallery</div>
+    <h2>青岛实景参考</h2>
+    <p style="font-size:13px;color:#888;margin-bottom:4px;letter-spacing:0.3px;">这些是青岛各景点的真实照片，提前感受青岛之美</p>
+
+    <div class="gallery">
+      <img src="images/qd-scenery-1.jpg" alt="栈桥">
+      <img src="images/qd-scenery-4.jpg" alt="信号山">
+      <img src="images/qd-scenery-3.jpg" alt="八大关街景">
+      <img src="images/qd-scenery-8.jpg" alt="花石楼">
+      <img src="images/qd-scenery-5.jpg" alt="五四广场">
+      <img src="images/qd-scenery-6.jpg" alt="金沙滩">
+      <img src="images/qd-beer-new.jpg" alt="啤酒博物馆">
+      <img src="images/food-dish-1.jpg" alt="青岛海鲜">
+      <img src="images/food-dish-4.jpg" alt="青岛美食">
+      <img src="images/qd-scenery-7.jpg" alt="青岛夜景">
+    </div>
+    <p style="font-size:10px;color:#bbb;text-align:right;margin-top:4px;">配图：维基共享资源 · Unsplash</p>
+
+    <div class="divider"></div>
+
+    <div class="section-number">提醒</div>
+    <h2>端午节特别提醒</h2>
+
+    <div class="tips-grid">
+      <div class="tip-box tip-red">
+        <strong>1️⃣ 提前订票订房！</strong>
+        端午假期高铁票和民宿会涨价售罄，尽早购买往返票。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>2️⃣ 防晒一定要做足！</strong>
+        海边紫外线是内地3-5倍，防晒霜+帽子+墨镜+防晒衣不能少。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>3️⃣ 穿搭建议</strong>
+        浅色/新中式/复古风最出片；一定穿平底鞋（石板路+坡道多）。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>4️⃣ 海鲜加工先问价</strong>
+        选明码标价的店，先问清再下单。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>5️⃣ 警惕旅游套路</strong>
+        栈桥"免费拍照"会强行收费；景区门口排档又贵又不新鲜。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>6️⃣ 赶海查潮汐</strong>
+        微信搜"青岛本地宝"查潮汐表，退潮时收获最多。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>7️⃣ 交通建议</strong>
+        老城区打车起步价10元。别自驾！市区坡多路窄停车难。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>8️⃣ 带充电宝</strong>
+        景点和夜市基本没有共享充电宝。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>9️⃣ 点菜少点</strong>
+        青岛菜份量大，不够再加，避免浪费。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>🔟 别买青旅</strong>
+        住宿小红书避雷：别选青年旅社，体验差。
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="page-footer">
+      <p style="font-size:15px;font-weight:600;color:#0a2342;margin-bottom:4px;">
+        🌊 祝你和闺蜜在青岛度过一段治愈又开心的假期！
+      </p>
+      <p style="font-size:12px;color:#888;">
+        红瓦绿树间 · 袋装啤酒压马路 · 赶海挖蛤蜊 · 在海边无所事事一整个下午 💕
+      </p>
+      <p style="font-size:10px;color:#ccc;margin-top:12px;">
+        攻略版本 v3.0 · 2026年5月整理 · 配图：维基共享资源（CC BY-SA 4.0） / Unsplash
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

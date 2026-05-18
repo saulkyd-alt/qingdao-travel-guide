@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jinzhiwei/.claude/**)",
+      "Read(//Users/jinzhiwei/.local/**)",
+      "Read(//Users/jinzhiwei/**)",
+      "Bash(gh auth *)",
+      "Bash(ls /private/tmp/skill-creator-tmp/ 2>/dev/null && echo \"=== cloned ===\" || echo \"empty\")",
+      "Read(//private/tmp/skill-creator-tmp/**)",
+      "Bash(mkdir -p /Users/jinzhiwei/.claude/skills)",
+      "Bash(cp -r /private/tmp/skill-creator-tmp /Users/jinzhiwei/.claude/skills/skill-creator)"
+    ]
+  }
+}

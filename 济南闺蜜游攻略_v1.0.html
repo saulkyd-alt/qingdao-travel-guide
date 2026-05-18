@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>济南·闺蜜3天2晚旅游攻略</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f5f0eb;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
+        .hero {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.55);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.9;
+            letter-spacing: 2px;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section {
+            margin: 48px 0;
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-left: 4px solid #2980b9;
+            padding-left: 16px;
+            margin-bottom: 24px;
+        }
+        .section-sub {
+            font-size: 18px;
+            font-weight: 600;
+            color: #34495e;
+            margin: 24px 0 12px;
+            padding-left: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+        th {
+            background: #2980b9;
+            color: #fff;
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 15px;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f0ebe4;
+            font-size: 14px;
+            vertical-align: top;
+        }
+        tr:last-child td { border-bottom: none; }
+        .label {
+            font-weight: 600;
+            color: #2980b9;
+            white-space: nowrap;
+            width: 90px;
+        }
+        .time-col {
+            white-space: nowrap;
+            width: 80px;
+            color: #666;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin: 1px 2px;
+        }
+        .tag-green { background: #e8f5e9; color: #388e3c; }
+        .tag-orange { background: #fff3e0; color: #e65100; }
+        .tag-blue { background: #e3f2fd; color: #1565c0; }
+        .tag-red { background: #fce4ec; color: #c62828; }
+        .tag-purple { background: #f3e5f5; color: #6a1b9a; }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .info-card .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .info-card .num {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2980b9;
+        }
+        .info-card .desc {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+        .img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 24px;
+        }
+        .img-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .img-card .caption {
+            padding: 12px 16px;
+            background: #fff;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+        .tip-box {
+            background: #e8f4fd;
+            border-left: 4px solid #2980b9;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .tip-box strong {
+            color: #1565c0;
+        }
+        .tip-warn {
+            background: #fff8e1;
+            border-left-color: #f9a825;
+        }
+        .tip-warn strong {
+            color: #e65100;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #999;
+            font-size: 13px;
+            border-top: 1px solid #e8e0d8;
+            margin-top: 48px;
+        }
+        @media (max-width: 640px) {
+            .hero { height: 300px; }
+            .hero-text h1 { font-size: 28px; }
+            table { font-size: 13px; }
+            td, th { padding: 10px 12px; }
+        }
+        .highlight {
+            background: #eaf2f8;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+    <img src="images/jinan-cover.jpg" alt="济南">
+    <div class="hero-text">
+        <h1>济南 · 闺蜜3天2晚</h1>
+        <p>上海出发 × 苏州出发 · 端午节小长假</p>
+        <span class="hero-tag">💧 泉城漫步 · 鲁菜盛宴 · 慢生活</span>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 概览 ==================== -->
+<div class="section">
+    <h2 class="section-title">📋 行程概览</h2>
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="icon">📅</div>
+            <div class="num">6/19 — 6/21</div>
+            <div class="desc">端午节 · 不用调休</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">🚄</div>
+            <div class="num">3 ~ 3.5 h</div>
+            <div class="desc">上海/苏州→济南西站高铁直达</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">💰</div>
+            <div class="num">¥1,200 ~ 1,800</div>
+            <div class="desc">人均预算（高铁+住宿+吃玩）</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">🏛️</div>
+            <div class="num">泉城韵事</div>
+            <div class="desc">四面荷花三面柳，一城山色半城湖</div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== 交通 ==================== -->
+<div class="section">
+    <h2 class="section-title">🚄 交通方案</h2>
+
+    <table>
+        <thead>
+            <tr><th style="width:110px">出发地</th><th style="width:120px">用时</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="label">上海 → 济南西</td>
+                <td>约 3h</td>
+                <td>最快2h59min（G8/G10/G22等标杆车），二等座约 ¥480<br>上海虹桥站出发，每天数十趟车次</td>
+            </tr>
+            <tr>
+                <td class="label">苏州 → 济南西</td>
+                <td>约 2h50min</td>
+                <td>最快2h46min（G6次），二等座约 ¥380~440<br>苏州北站出发，班次密集</td>
+            </tr>
+            <tr class="highlight">
+                <td class="label">⭐ 碰头方案</td>
+                <td>—</td>
+                <td><strong>济南西站站内汇合</strong>，再一起打车去市区（约 25~30 分钟）<br>或坐地铁1号线转2号线直达大明湖附近</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>💡 提醒：</strong>端午节假期建议尽早购买往返高铁票。上海苏州均有大量车次到济南西站，选择非常灵活。
+    </div>
+</div>
+
+<!-- ==================== 行程 ==================== -->
+<div class="section">
+    <h2 class="section-title">📅 3天2晚详细行程（不累·漫游版）</h2>
+
+    <!-- DAY 1 -->
+    <div class="img-card">
+        <img src="images/jinan-scene.jpg" alt="大明湖">
+        <div class="caption">🌊 大明湖 · 超然楼夜景 — 泉城地标，傍晚亮灯瞬间超震撼</div>
+    </div>
+
+    <h3 class="section-sub">🔹 Day 1（6/19 周五）— 抵达 + 大明湖夜游</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">中午</td>
+                <td>各自高铁出发 → 济南西站碰头</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:00</td>
+                <td>到酒店办入住，休息一下</td>
+                <td><span class="tag tag-blue">躺平</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">15:30</td>
+                <td><strong>🍜 午饭</strong> — 超意兴吃把子肉 / 芙蓉街逛吃油旋+甜沫</td>
+                <td><span class="tag tag-orange">美食</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">17:00</td>
+                <td><strong>🌳 大明湖散步</strong> — 免费，沿湖慢走，荷花季（6月正好初荷🌷）</td>
+                <td><span class="tag tag-blue">拍照</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">19:00</td>
+                <td><strong>🏯 超然楼亮灯</strong> — 亮灯瞬间超级震撼，提前占好位置！</td>
+                <td><span class="tag tag-purple">必看</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">19:30</td>
+                <td><strong>🌃 曲水亭街+百花洲夜逛</strong> — 青石板流水人家，找家小酒馆坐坐</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DAY 2 -->
+    <div class="img-card">
+        <img src="images/jinan-food.jpg" alt="济南鲁菜">
+        <div class="caption">🍖 济南必吃 — 把子肉、九转大肠、糖醋黄河鲤鱼、葱烧海参</div>
+    </div>
+
+    <h3 class="section-sub">🔹 Day 2（6/20 周六）— 泉水漫步 + 鲁菜盛宴</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">自然醒</td>
+                <td>🥟 <strong>穆得老周家</strong> 吃牛肉烧饼+羊汤（神仙搭配！）</td>
+                <td><span class="tag tag-orange">早餐必吃</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">10:00</td>
+                <td><strong>⛲ 趵突泉</strong>（门票¥40）— 东门进，看三股水喷涌，早去避开旅行团</td>
+                <td><span class="tag tag-blue">泉水</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">11:30</td>
+                <td><strong>🪷 五龙潭</strong>（紧邻趵突泉，门票¥5）— 人少清静，泉水清澈，古风亭台</td>
+                <td><span class="tag tag-green">小众</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">12:30</td>
+                <td><strong>🍜 鲁菜午餐</strong> — 燕喜堂（百年老字号）或魁盛居<br>必吃：九转大肠、糖醋黄河鲤鱼、奶汤蒲菜</td>
+                <td><span class="tag tag-orange">美食重头戏</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:30</td>
+                <td><strong>🆓 黑虎泉</strong> — 免费！带水杯接泉水，看大爷打水，最地道的泉城慢生活</td>
+                <td><span class="tag tag-blue">免费</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">16:00</td>
+                <td><strong>☕ 经三路/老商埠区咖啡馆</strong> — 民国风街道，找家咖啡馆发呆拍照</td>
+                <td><span class="tag tag-blue">躺平</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">18:30</td>
+                <td><strong>🍺 宽厚里夜市</strong> — 逛吃+买伴手礼，泉水豆腐/油旋/扒蹄</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DAY 3 -->
+    <h3 class="section-sub">🔹 Day 3（6/21 周日）— 登高望远 + 返程</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">自然醒</td>
+                <td>退房，行李寄存前台</td>
+                <td><span class="tag tag-blue">睡到饱</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">10:00</td>
+                <td><strong>⛰️ 千佛山</strong>（门票¥30）— 索道上山单程¥20，山顶俯瞰全城</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">12:00</td>
+                <td><strong>🍜 最后一顿鲁菜</strong> — 四季明湖·鲁菜海鲜（明湖店）<br>葱烧海参、奶汤全家福、明湖脆藕</td>
+                <td><span class="tag tag-orange">完美收官</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:00</td>
+                <td>回酒店取行李 → 济南西站 → 各回各家 🏠</td>
+                <td><span class="tag tag-green">返程</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>🎯 如果想更小众：</strong>Day 2 下午不去黑虎泉的话，可以换成 <strong>老舍纪念馆</strong>（露台拍老城全景，人少出片）或 <strong>山东博物馆</strong>（免费需预约，十大镇馆之宝）。
+    </div>
+</div>
+
+<!-- ==================== 住宿 ==================== -->
+<div class="section">
+    <h2 class="section-title">🏨 住宿推荐（双床房 · 干净安静 · 性价比）</h2>
+    <table>
+        <thead>
+            <tr><th>酒店</th><th>价格/晚</th><th>特点</th><th>推荐理由</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>济南大明湖城际酒店</strong></td>
+                <td>¥250~400</td>
+                <td><span class="tag tag-green">2025新开业</span> <span class="tag tag-blue">评分4.8</span></td>
+                <td>华住旗下高端品牌，地铁口，卫生隔音好，高层远眺大明湖 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>如家精选（大明湖店）</strong></td>
+                <td>¥200~350</td>
+                <td><span class="tag tag-blue">评分4.7</span> <span class="tag tag-purple">免费停车</span></td>
+                <td>步行10分钟到大明湖，零压床垫，性价比高</td>
+            </tr>
+            <tr>
+                <td><strong>如家商旅（泉城路店）</strong></td>
+                <td>¥250~400</td>
+                <td><span class="tag tag-orange">位置绝佳</span></td>
+                <td>楼下就是世茂广场、宽厚里，逛吃最方便</td>
+            </tr>
+            <tr>
+                <td><strong>星程饭店（大明湖站店）</strong></td>
+                <td>¥100~150</td>
+                <td><span class="tag tag-green">2025新开业</span> <span class="tag tag-green">超低价</span></td>
+                <td>预算首选！高楼层安静，全新装修，离景区稍远但性价比炸裂</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tip-box">
+        <strong>📍 建议住大明湖/泉城路商圈</strong> — 所有景点都在步行或共享单车范围内，逛吃超方便。
+    </div>
+</div>
+
+<!-- ==================== 美食 ==================== -->
+<div class="section">
+    <h2 class="section-title">🍜 必吃美食清单（不踩雷）</h2>
+
+    <h3 class="section-sub">🥇 鲁菜经典（正餐必点）</h3>
+    <table>
+        <thead>
+            <tr><th style="width:120px">菜名</th><th style="width:160px">推荐餐厅</th><th style="width:70px">人均</th><th>点评</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>九转大肠</strong></td>
+                <td>燕喜堂 / 魁盛居</td>
+                <td>¥80~120</td>
+                <td>鲁菜头牌！酸甜苦辣咸五味俱全 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>糖醋黄河鲤鱼</strong></td>
+                <td>燕喜堂 / 会仙楼</td>
+                <td>¥80~120</td>
+                <td>造型霸气，外酥里嫩，酸甜口</td>
+            </tr>
+            <tr>
+                <td><strong>葱烧海参</strong></td>
+                <td>四季明湖·鲁菜海鲜</td>
+                <td>¥100~150</td>
+                <td>鲁菜天花板，葱香浓郁，海参Q弹</td>
+            </tr>
+            <tr>
+                <td><strong>奶汤蒲菜</strong></td>
+                <td>燕喜堂 / 文升园</td>
+                <td>¥50~80</td>
+                <td>济南特有的奶汤菜，清香鲜甜</td>
+            </tr>
+            <tr>
+                <td><strong>爆炒腰花</strong></td>
+                <td>燕喜堂 / 阳光家常菜</td>
+                <td>¥60~90</td>
+                <td>考验火候的功夫菜，脆嫩不腥</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="section-sub">🥈 济南灵魂小吃（街头必吃）</h3>
+    <table>
+        <thead>
+            <tr><th style="width:120px">美食</th><th style="width:160px">推荐店铺</th><th style="width:70px">价格</th><th>点评</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>把子肉</strong></td>
+                <td>刘小忙把子肉 / 武岳庙把子肉</td>
+                <td>¥15~25</td>
+                <td>济南灵魂美食！酱香浓郁，入口即化 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>牛肉烧饼+羊汤</strong></td>
+                <td>穆得老周家</td>
+                <td>¥20~30</td>
+                <td>"神仙搭配"！烧饼酥脆，羊汤鲜美 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>油旋</strong></td>
+                <td>芙蓉街/老字号铺子</td>
+                <td>¥3~5</td>
+                <td>济南专属！外酥里软，葱香四溢</td>
+            </tr>
+            <tr>
+                <td><strong>甜沫</strong></td>
+                <td>超意兴 / 老济南早餐摊</td>
+                <td>¥3~5</td>
+                <td>咸口小米粥配花生粉条，暖胃早餐</td>
+            </tr>
+            <tr>
+                <td><strong>泉水豆腐</strong></td>
+                <td>宽厚里 / 百花洲</td>
+                <td>¥10~15</td>
+                <td>泉水做的豆腐，嫩滑清甜</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box tip-warn">
+        <strong>⚠️ 排队提示：</strong>燕喜堂、魁盛居等热门鲁菜馆建议 <strong>11:00 或 17:00 前到店</strong>，避免排队。刘小忙把子肉等网红店也要趁早。
+    </div>
+</div>
+
+<!-- ==================== 拍照 ==================== -->
+<div class="section">
+    <h2 class="section-title">📸 闺蜜拍照机位</h2>
+    <table>
+        <thead>
+            <tr><th style="width:130px">地点</th><th>拍照亮点</th><th>最佳时间</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>超然楼</strong></td>
+                <td>亮灯瞬间金光灿灿，湖面倒影绝美</td>
+                <td>傍晚 19:00 亮灯前后</td>
+            </tr>
+            <tr>
+                <td><strong>曲水亭街</strong></td>
+                <td>青石板+泉水人家，穿新中式/旗袍超搭</td>
+                <td>上午 9-11 点</td>
+            </tr>
+            <tr>
+                <td><strong>趵突泉·白雪楼</strong></td>
+                <td>古建+泉水+绿植，色彩丰富</td>
+                <td>上午 10 点前</td>
+            </tr>
+            <tr>
+                <td><strong>大明湖·超然楼倒影</strong></td>
+                <td>湖边找角度拍楼+倒影，对称构图</td>
+                <td>清晨或傍晚</td>
+            </tr>
+            <tr>
+                <td><strong>经三路老商埠</strong></td>
+                <td>民国风建筑，咖啡馆门口，文艺感拉满</td>
+                <td>下午 3-5 点</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== 预算 ==================== -->
+<div class="section">
+    <h2 class="section-title">💰 预算估算（人均）</h2>
+    <table>
+        <thead>
+            <tr><th>项目</th><th>费用</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🚄 往返高铁</td>
+                <td>¥400 ~ 500</td>
+                <td>上海 ¥480 / 苏州 ¥380 ~ 440（按单程均价估算）</td>
+            </tr>
+            <tr>
+                <td>🏨 住宿 2 晚（双床房平摊）</td>
+                <td>¥200 ~ 400</td>
+                <td>大明湖周边中档连锁/品质酒店</td>
+            </tr>
+            <tr>
+                <td>🍜 吃饭 3 天</td>
+                <td>¥350 ~ 550</td>
+                <td>小吃+鲁菜正餐+咖啡茶饮</td>
+            </tr>
+            <tr>
+                <td>🎫 门票</td>
+                <td>¥80 ~ 100</td>
+                <td>趵突泉¥40 + 千佛山¥30 + 五龙潭¥5</td>
+            </tr>
+            <tr>
+                <td>🚕 市内交通</td>
+                <td>¥50 ~ 100</td>
+                <td>打车+共享单车+地铁</td>
+            </tr>
+            <tr style="background: #eaf2f8; font-weight: 700;">
+                <td><strong>合计</strong></td>
+                <td><strong>¥1,200 ~ 1,800</strong></td>
+                <td>丰俭由人，预算友好 ✅</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== 必游景点速览 ==================== -->
+<div class="section">
+    <h2 class="section-title">🏛️ 景点速览</h2>
+    <table>
+        <thead>
+            <tr><th>景点</th><th>门票</th><th>用时</th><th>一句话点评</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>趵突泉</strong></td>
+                <td>¥40</td>
+                <td>1.5~2h</td>
+                <td>天下第一泉，来济南必去</td>
+            </tr>
+            <tr>
+                <td><strong>大明湖</strong></td>
+                <td>免费</td>
+                <td>1~2h</td>
+                <td>6月初荷正好，散步超惬意</td>
+            </tr>
+            <tr>
+                <td><strong>五龙潭</strong></td>
+                <td>¥5</td>
+                <td>1h</td>
+                <td>人少清静，泉水清澈，隐藏宝藏</td>
+            </tr>
+            <tr>
+                <td><strong>黑虎泉</strong></td>
+                <td>免费</td>
+                <td>1h</td>
+                <td>带杯子接泉水喝，最地道体验</td>
+            </tr>
+            <tr>
+                <td><strong>千佛山</strong></td>
+                <td>¥30</td>
+                <td>1.5~2h</td>
+                <td>索道上山+步行下山，俯瞰全城</td>
+            </tr>
+            <tr>
+                <td><strong>曲水亭街</strong></td>
+                <td>免费</td>
+                <td>不定</td>
+                <td>青石板流水人家，拍照一绝</td>
+            </tr>
+            <tr>
+                <td><strong>山东博物馆</strong></td>
+                <td>免费</td>
+                <td>2h</td>
+                <td>需预约，十大镇馆之宝值得看</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== TIPS ==================== -->
+<div class="section">
+    <h2 class="section-title">✅ 端午节特别提醒</h2>
+    <div class="tip-box">
+        <strong>1️⃣ 提前预约！</strong> 趵突泉、山东博物馆建议提前1~2天线上预约。山东博物馆周一闭馆（6/22 周一，不影响）。<br><br>
+        <strong>2️⃣ 趵突泉要早去</strong> — 9点前到避开旅行团，否则人从众。<br><br>
+        <strong>3️⃣ 超然楼亮灯占位</strong> — 大约 19:00~19:30 亮灯，建议提前 20 分钟到湖边找好位置。<br><br>
+        <strong>4️⃣ 端午尽早订票订房</strong> — 济南虽然不是最热门目的地，但假期还是会涨价的。<br><br>
+        <strong>5️⃣ 穿搭建议</strong> — 浅色/新中式/旗袍最出片！6月济南较热，带伞和防晒。平底鞋必备。<br><br>
+        <strong>6️⃣ 共享单车+地铁</strong> — 老城区景点密集，骑共享单车比打车方便。<br><br>
+        <strong>7️⃣ 泉水可以喝</strong> — 黑虎泉有正规取水口，带个空瓶子接泉水喝，清甜！<br><br>
+        <strong>8️⃣ 天气</strong> — 6月济南较热（30℃+），建议上午和傍晚活动，中午找咖啡馆/商场避暑。
+    </div>
+</div>
+
+<!-- ==================== 对比 ==================== -->
+<div class="section">
+    <h2 class="section-title">🤔 景德镇 vs 济南 怎么选？</h2>
+    <table>
+        <thead>
+            <tr><th style="width:120px">对比项</th><th>🏺 景德镇</th><th>💧 济南</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>气质</strong></td>
+                <td>文艺手工·慢生活</td>
+                <td>泉水叮咚·烟火气</td>
+            </tr>
+            <tr>
+                <td><strong>高铁用时（上海）</strong></td>
+                <td>2.5~3h</td>
+                <td>约 3h</td>
+            </tr>
+            <tr>
+                <td><strong>高铁用时（苏州）</strong></td>
+                <td>3~3.5h</td>
+                <td>约 2h50min</td>
+            </tr>
+            <tr>
+                <td><strong>美食特色</strong></td>
+                <td>江西辣味+小吃</td>
+                <td>鲁菜经典+把子肉</td>
+            </tr>
+            <tr>
+                <td><strong>闺蜜活动</strong></td>
+                <td>陶艺体验+做陶瓷🏺</td>
+                <td>泉水边散步+喝泉水☕</td>
+            </tr>
+            <tr>
+                <td><strong>端午拥挤度</strong></td>
+                <td>⭐ 人少（小众）</td>
+                <td>⭐⭐ 中等（有旅游团但可控）</td>
+            </tr>
+            <tr>
+                <td><strong>适合</strong></td>
+                <td>喜欢动手做东西、文艺风</td>
+                <td>喜欢历史美食、悠闲散步</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer">
+    <p>📌 攻略版本 v1.0 · 2026年5月整理</p>
+    <p style="margin-top:4px;">祝你和闺蜜在济南度过一个治愈又开心的假期 🏛️💧✨</p>
+</div>
+
+</div>
+
+</body>
+</html>

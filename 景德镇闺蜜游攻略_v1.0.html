@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>景德镇·闺蜜3天2晚旅游攻略</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #faf7f2;
+            color: #2c2c2c;
+            line-height: 1.8;
+        }
+        .hero {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.9;
+            letter-spacing: 2px;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section {
+            margin: 48px 0;
+        }
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #3d2b1f;
+            border-left: 4px solid #b85c3a;
+            padding-left: 16px;
+            margin-bottom: 24px;
+        }
+        .section-sub {
+            font-size: 18px;
+            font-weight: 600;
+            color: #5a4030;
+            margin: 24px 0 12px;
+            padding-left: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+        th {
+            background: #8b5a3c;
+            color: #fff;
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 15px;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f0ebe4;
+            font-size: 14px;
+            vertical-align: top;
+        }
+        tr:last-child td { border-bottom: none; }
+        .label {
+            font-weight: 600;
+            color: #8b5a3c;
+            white-space: nowrap;
+            width: 90px;
+        }
+        .time-col {
+            white-space: nowrap;
+            width: 80px;
+            color: #666;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin: 1px 2px;
+        }
+        .tag-green { background: #e8f5e9; color: #388e3c; }
+        .tag-orange { background: #fff3e0; color: #e65100; }
+        .tag-blue { background: #e3f2fd; color: #1565c0; }
+        .tag-red { background: #fce4ec; color: #c62828; }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .info-card .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .info-card .num {
+            font-size: 20px;
+            font-weight: 700;
+            color: #8b5a3c;
+        }
+        .info-card .desc {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+        .img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 24px;
+        }
+        .img-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .img-card .caption {
+            padding: 12px 16px;
+            background: #fff;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+        .tip-box {
+            background: #fff8e1;
+            border-left: 4px solid #f9a825;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .tip-box strong {
+            color: #e65100;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #999;
+            font-size: 13px;
+            border-top: 1px solid #e8e0d8;
+            margin-top: 48px;
+        }
+        @media (max-width: 640px) {
+            .hero { height: 300px; }
+            .hero-text h1 { font-size: 28px; }
+            table { font-size: 13px; }
+            td, th { padding: 10px 12px; }
+        }
+        .highlight {
+            background: #fdf2e9;
+        }
+        .star {
+            color: #f9a825;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+    <img src="images/cover.jpg" alt="景德镇">
+    <div class="hero-text">
+        <h1>景德镇 · 闺蜜3天2晚</h1>
+        <p>上海出发 × 苏州出发 · 端午节小长假</p>
+        <span class="hero-tag">🏺 小众 · 不累 · 好吃 · 文艺</span>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 概览 ==================== -->
+<div class="section">
+    <h2 class="section-title">📋 行程概览</h2>
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="icon">📅</div>
+            <div class="num">6/19 — 6/21</div>
+            <div class="desc">端午节 · 不用调休</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">🚄</div>
+            <div class="num">2.5 ~ 3.5 h</div>
+            <div class="desc">上海/苏州→景德镇高铁直达</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">💰</div>
+            <div class="num">¥1,000 ~ 1,500</div>
+            <div class="desc">人均预算（高铁+住宿+吃玩）</div>
+        </div>
+        <div class="info-card">
+            <div class="icon">🏘️</div>
+            <div class="num">小众冷门</div>
+            <div class="desc">端午不拥挤，节奏慢慢来</div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== 交通 ==================== -->
+<div class="section">
+    <h2 class="section-title">🚄 交通方案</h2>
+
+    <table>
+        <thead>
+            <tr><th style="width:100px">出发地</th><th style="width:120px">用时</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="label">上海 → 景德镇北</td>
+                <td>约 2.5~3h</td>
+                <td>二等座约 ¥200，每天多趟高铁直达</td>
+            </tr>
+            <tr>
+                <td class="label">苏州 → 景德镇北</td>
+                <td>约 3~3.5h</td>
+                <td>经杭州/上饶中转，二等座约 ¥200+</td>
+            </tr>
+            <tr class="highlight">
+                <td class="label">⭐ 碰头方案</td>
+                <td>—</td>
+                <td><strong>景德镇北站站内汇合</strong>，再一起打车去市区（约 20 分钟）</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>💡 提醒：</strong>端午节假期建议尽早购买往返高铁票，临近假期容易售罄。
+    </div>
+</div>
+
+<!-- ==================== 行程 ==================== -->
+<div class="section">
+    <h2 class="section-title">📅 3天2晚详细行程（不累版）</h2>
+
+    <!-- DAY 1 -->
+    <div class="img-card">
+        <img src="images/cover.jpg" alt="陶溪川夜景">
+        <div class="caption">🌃 陶溪川文创街区夜景 — 红砖厂房+创意市集，超出片</div>
+    </div>
+
+    <h3 class="section-sub">🔹 Day 1（6/19 周五）— 抵达 + 陶溪川夜逛</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">中午</td>
+                <td>各自高铁出发 → 景德镇北站碰头</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:00</td>
+                <td>到酒店办入住，休息一下</td>
+                <td><span class="tag tag-blue">躺平</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">15:30</td>
+                <td><strong>🍜 抚州弄扫街</strong> — 油条包麻糍 ¥5、冷粉、瓦罐汤</td>
+                <td><span class="tag tag-orange">美食</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">17:00</td>
+                <td><strong>🏛️ 御窑博物馆</strong> — 红砖拱顶建筑，水池倒影超出片<br>（20:30 后免费入场）</td>
+                <td><span class="tag tag-blue">拍照</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">19:30</td>
+                <td><strong>🌃 陶溪川夜市</strong> — 逛创意市集 · 吃「回家吃饭」或「欧记大排档」</td>
+                <td><span class="tag tag-orange">美食</span><span class="tag tag-green">轻松</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DAY 2 -->
+    <div class="img-card">
+        <img src="images/pottery.jpg" alt="陶艺体验">
+        <div class="caption">🏺 三宝村陶艺体验 — 一起拉坯做陶，作品可以寄回家</div>
+    </div>
+
+    <h3 class="section-sub">🔹 Day 2（6/20 周六）— 三宝村 + 陶艺体验</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">自然醒</td>
+                <td>酒店周边吃个早饭</td>
+                <td><span class="tag tag-blue">睡到饱</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">11:00</td>
+                <td>打车去 <strong>三宝村</strong>，租电瓶车 ¥30/天 慢悠悠逛</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">12:30</td>
+                <td><strong>🍜 午餐</strong> — 寻味三宝 / 野炉子（园林意境赣菜）</td>
+                <td><span class="tag tag-orange">美食</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:00</td>
+                <td><strong>🏺 陶艺体验</strong> — 拉坯/素胚手绘 ¥50~100/件，可寄回家</td>
+                <td><span class="tag tag-green">闺蜜必做</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">16:00</td>
+                <td><strong>☕ 三宝咖啡馆发呆</strong> — 不空山（日式庭院）/ 禾场咖啡</td>
+                <td><span class="tag tag-blue">躺平</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">19:00</td>
+                <td><strong>🌙 陶阳新村夜市</strong> — 淘手串（大胆砍价！）或回酒店躺</td>
+                <td><span class="tag tag-green">轻松</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DAY 3 -->
+    <div class="img-card">
+        <img src="images/food.jpg" alt="景德镇美食">
+        <div class="caption">🍜 景德镇特色小吃 — 冷粉、饺子粑、牛骨粉、油条包麻糍</div>
+    </div>
+
+    <h3 class="section-sub">🔹 Day 3（6/21 周日）— 雕塑瓷厂淘货 + 返程</h3>
+    <table>
+        <thead>
+            <tr><th style="width:60px">时间</th><th>行程</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">自然醒</td>
+                <td>退房，行李寄存前台</td>
+                <td><span class="tag tag-blue">睡到饱</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">10:00</td>
+                <td><strong>🛍️ 雕塑瓷厂</strong> — 逛每盐所、蓝π咖啡、淘手作陶瓷</td>
+                <td><span class="tag tag-blue">拍照</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">12:00</td>
+                <td><strong>🍜 抚州弄再吃一顿</strong> — 补货牛骨粉、打包辣椒粑做伴手礼</td>
+                <td><span class="tag tag-orange">美食</span></td>
+            </tr>
+            <tr>
+                <td class="time-col">14:00</td>
+                <td>回酒店取行李 → 景德镇北站 → 各回各家 🏠</td>
+                <td><span class="tag tag-green">返程</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>🎯 周六限定彩蛋：</strong>乐天市集（每周六 9:00-12:00）你们正好赶上！大学生创意陶瓷作品，便宜又有趣，建议 Day 2 出发三宝村前先去逛一圈。
+    </div>
+</div>
+
+<!-- ==================== 住宿 ==================== -->
+<div class="section">
+    <h2 class="section-title">🏨 住宿推荐（双床房 · 干净安静 · 性价比）</h2>
+    <table>
+        <thead>
+            <tr><th>酒店</th><th>价格/晚</th><th>特点</th><th>推荐理由</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>涵香居民宿（陶溪川店）</strong></td>
+                <td>¥159 起</td>
+                <td><span class="tag tag-green">2025新开业</span> <span class="tag tag-blue">评分9.8</span></td>
+                <td>干净安静，步行到陶溪川，性价比超高 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>悦庭楠舍酒店（人民广场店）</strong></td>
+                <td>¥150 起</td>
+                <td><span class="tag tag-green">2025新开业</span> <span class="tag tag-blue">全屋智能</span></td>
+                <td>位置便利，干净整洁，巨幕投影</td>
+            </tr>
+            <tr>
+                <td><strong>如家精选（陶溪川店）</strong></td>
+                <td>¥200~300</td>
+                <td><span class="tag tag-orange">连锁品牌</span></td>
+                <td>品质稳定有保障，位置好</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tip-box">
+        <strong>📍 建议住陶溪川周边</strong> — 去哪都近，晚上出门逛吃方便，且周边环境安静。
+    </div>
+</div>
+
+<!-- ==================== 美食 ==================== -->
+<div class="section">
+    <h2 class="section-title">🍜 必吃美食清单（不踩雷）</h2>
+    <table>
+        <thead>
+            <tr><th style="width:140px">美食</th><th style="width:180px">推荐店铺</th><th style="width:70px">人均</th><th>点评</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>油条包麻糍</strong></td>
+                <td>抚州弄口小摊</td>
+                <td>¥5</td>
+                <td>碳水+碳水=终极快乐！外酥内糯 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>牛骨粉</strong></td>
+                <td>樊氏牛骨粉（陶阳里东门）</td>
+                <td>¥20</td>
+                <td>香辣牛骨酥烂脱骨，配三鲜米粉 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>冷粉+饺子粑</strong></td>
+                <td>毛仔特色小吃 / 眼镜冷粉</td>
+                <td>¥15</td>
+                <td>粗粉Q弹带果香，饺子粑1元3个</td>
+            </tr>
+            <tr>
+                <td><strong>家常赣菜</strong></td>
+                <td>「回家吃饭」（长虹店）</td>
+                <td>¥60~80</td>
+                <td>黄豆烧茄子、摔打肉丸、豆冲鱼头，本地人最爱</td>
+            </tr>
+            <tr>
+                <td><strong>夜宵大排档</strong></td>
+                <td>欧记大排档</td>
+                <td>¥60~80</td>
+                <td>宁都三杯鸡、招牌鸡脚、生煎包，配9.9元马蹄椰子水 ⭐</td>
+            </tr>
+            <tr>
+                <td><strong>园林赣菜</strong></td>
+                <td>寻味三宝 / 野炉子</td>
+                <td>¥80~120</td>
+                <td>环境好+好吃+出片，三宝村必去</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>⚠️ 江西菜真实辣度警告！</strong>不能吃辣一定要说 <strong>"微微微微辣"</strong>。<br>
+        <strong>🍵 解辣神器：</strong>「季刻」龙眼玫瑰盐奶茶（¥15）或「洪都大拇指」奶茶，便宜好喝。
+    </div>
+</div>
+
+<!-- ==================== 拍照 ==================== -->
+<div class="section">
+    <h2 class="section-title">📸 闺蜜拍照机位</h2>
+    <table>
+        <thead>
+            <tr><th style="width:140px">地点</th><th>拍照亮点</th><th>最佳时间</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>御窑博物馆</strong></td>
+                <td>红砖拱顶+水池倒影，构图绝了</td>
+                <td>傍晚蓝调时刻</td>
+            </tr>
+            <tr>
+                <td><strong>陶溪川·大烟囱</strong></td>
+                <td>红砖工业风，仰拍超出片</td>
+                <td>下午4-5点/夜晚</td>
+            </tr>
+            <tr>
+                <td><strong>三宝村·青花瓷斑马线</strong></td>
+                <td>文艺感拉满，两个人一起走抓拍</td>
+                <td>上午10-11点</td>
+            </tr>
+            <tr>
+                <td><strong>每盐所</strong></td>
+                <td>侘寂风白幕布景</td>
+                <td>全天</td>
+            </tr>
+            <tr>
+                <td><strong>不空山</strong></td>
+                <td>日式庭院+抹茶，茶道大片</td>
+                <td>下午3-4点</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== 预算 ==================== -->
+<div class="section">
+    <h2 class="section-title">💰 预算估算（人均）</h2>
+    <table>
+        <thead>
+            <tr><th>项目</th><th>费用</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🚄 往返高铁</td>
+                <td>¥400 ~ 500</td>
+                <td>上海/苏州 ↔ 景德镇北站</td>
+            </tr>
+            <tr>
+                <td>🏨 住宿 2 晚（双床房平摊）</td>
+                <td>¥150 ~ 300</td>
+                <td>涵香居/悦庭楠舍等</td>
+            </tr>
+            <tr>
+                <td>🍜 吃饭 3 天</td>
+                <td>¥300 ~ 500</td>
+                <td>小吃+正餐+咖啡茶饮</td>
+            </tr>
+            <tr>
+                <td>🏺 陶艺体验</td>
+                <td>¥50 ~ 100</td>
+                <td>拉坯/手绘，可寄回家</td>
+            </tr>
+            <tr>
+                <td>🎫 门票</td>
+                <td>¥53</td>
+                <td>仅陶阳里/御窑博物馆需购票</td>
+            </tr>
+            <tr>
+                <td>🚕 市内交通</td>
+                <td>¥50 ~ 100</td>
+                <td>打车+租电瓶车</td>
+            </tr>
+            <tr style="background: #fdf2e9; font-weight: 700;">
+                <td><strong>合计</strong></td>
+                <td><strong>¥1,000 ~ 1,500</strong></td>
+                <td>丰俭由人，预算友好 ✅</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ==================== TIPS ==================== -->
+<div class="section">
+    <h2 class="section-title">✅ 端午节特别提醒</h2>
+    <div class="tip-box">
+        <strong>1️⃣ 提前预约！</strong> 中国陶瓷博物馆需通过「畅游景德镇」小程序提前 1~5 天预约，周一闭馆。<br><br>
+        <strong>2️⃣ 乐天市集仅周六上午</strong>（6/20 9:00-12:00），你们刚好赶上！<br><br>
+        <strong>3️⃣ 端午尽早订票订房</strong> — 虽然景德镇小众，但假期还是会涨价的。<br><br>
+        <strong>4️⃣ 穿搭建议</strong> — 浅色/新中式/复古风最出片；一定穿 <strong>平底鞋</strong>（石板路多）。<br><br>
+        <strong>5️⃣ 带充电宝</strong> — 市集基本没有共享充电宝。<br><br>
+        <strong>6️⃣ 大件瓷器邮寄</strong> — 别自己背，找店家寄回家防磕碰。<br><br>
+        <strong>7️⃣ 关于辣度</strong> — 点单时一定说 "微微微辣"，江西辣不是开玩笑的！
+    </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="footer">
+    <p>📌 攻略版本 v1.0 · 2026年5月整理</p>
+    <p style="margin-top:4px;">祝你和闺蜜在景德镇度过一个治愈又开心的假期 🏺✨</p>
+</div>
+
+</div>
+
+</body>
+</html>

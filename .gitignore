@@ -1,0 +1,7 @@
+.DS_Store
+*.bak
+*.bak2
+xhs-temp/
+xhs2/
+food-source/
+*.html.bak
