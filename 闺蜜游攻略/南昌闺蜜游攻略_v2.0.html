@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南昌 · 闺蜜3天2晚旅游攻略 v2.0</title>
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ink: #1a1a2e;
+  --muted: #6b7280;
+  --line: #dce0e6;
+  --paper: #fffdf8;
+  --soft: #f6f8fc;
+  --hero: #c41e3a;
+  --hero-dark: #8b1a2b;
+  --gold: #d4a843;
+  --gold-light: #f0d78c;
+  --amber: #e07b39;
+  --teal: #3a7d8c;
+  --shadow: 0 18px 55px rgba(26, 26, 46, 0.12);
+}
+
+body {
+  font-family: "SF Pro Display", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(196, 30, 58, 0.10), transparent 26%),
+    radial-gradient(circle at 85% 20%, rgba(212, 168, 67, 0.12), transparent 24%),
+    linear-gradient(135deg, #faf5f0 0%, #f5f0ea 48%, #f8f5f2 100%);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  counter-reset: page;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 28px auto;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,253,248,0.98)),
+    var(--paper);
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  counter-increment: page;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--hero), var(--gold), var(--amber), var(--teal));
+  z-index: 5;
+}
+.page:not(:first-child)::after {
+  content: "NANCHANG GIRLS TRIP · " counter(page, decimal-leading-zero);
+  position: absolute;
+  right: 18mm;
+  bottom: 8mm;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: rgba(107,114,128,0.56);
+}
+
+/* ===== COVER ===== */
+.cover {
+  position: relative;
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.cover img {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.cover-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    linear-gradient(160deg, rgba(139,26,43,0.92) 0%, rgba(196,30,58,0.62) 45%, rgba(212,168,67,0.18) 100%),
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.14), transparent 28%);
+  z-index: 1;
+}
+.cover-content { position: relative; z-index: 2; text-align: center; padding: 40px; max-width: 720px; }
+
+.cover-badge {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.12);
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.cover h1 {
+  font-size: 58px;
+  font-weight: 650;
+  letter-spacing: -0.8px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  line-height: 1.15;
+}
+.cover h1 span { color: #f5d78c; }
+.cover .subtitle {
+  font-size: 17px;
+  opacity: 0.9;
+  margin: 16px 0 36px;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+.cover-stat {
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.24);
+  padding: 14px 10px;
+  border-radius: 8px;
+}
+.cover-stat .l { font-size: 11px; opacity: 0.7; margin-bottom: 4px; }
+.cover-stat .v { font-size: 17px; font-weight: 600; }
+
+.cover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.cover-tags span {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.cover-route {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 620px;
+  margin: 0 auto 38px;
+}
+.route-chip {
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+}
+.route-chip .day {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  opacity: 0.72;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+.route-chip .route {
+  display: block;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.cover-quote {
+  font-size: 15px;
+  opacity: 0.8;
+  letter-spacing: 4px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 28px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 28px;
+  font-size: 11px;
+  opacity: 0.5;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+/* ===== INNER PAGES ===== */
+.page-content { padding: 14mm 20mm 18mm; position: relative; z-index: 1; }
+.page-content::before {
+  content: "";
+  position: absolute;
+  top: 10mm;
+  right: 12mm;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(196, 30, 58, 0.12);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--hero);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section-number::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--hero), var(--gold));
+  display: inline-block;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 650;
+  color: var(--hero-dark);
+  letter-spacing: -0.5px;
+  margin: 8px 0 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--hero);
+  margin: 24px 0 12px;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(196,30,58,0.36), rgba(212,168,67,0.18), transparent);
+  margin: 28px 0;
+}
+
+/* ===== IMAGE CARDS ===== */
+.img-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 12px 28px rgba(26,26,46,0.11);
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.72);
+}
+.img-card img { width: 100%; display: block; }
+.img-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 30px 18px 14px;
+  background: linear-gradient(transparent, rgba(26,26,46,0.68));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+.img-label .credit {
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-left: 8px;
+}
+
+.img-row {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+.img-row .img-card { flex: 1; margin: 0; }
+.img-row .img-card img { height: 150px; object-fit: cover; }
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 16px 0;
+  font-size: 12.5px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 22px rgba(26,26,46,0.05);
+}
+th {
+  background: linear-gradient(90deg, #1a1a2e, #2d2d44);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid #e7eef5;
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: rgba(246,248,252,0.86); }
+td:first-child {
+  color: var(--hero);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+/* ===== DAY HEADER ===== */
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  margin: 24px 0 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.day-1 { background: linear-gradient(135deg, #fef0f2, #fff5f5); color: #8b1a2b; border-left: 4px solid #c41e3a; }
+.day-2 { background: linear-gradient(135deg, #fef9ee, #fffdf5); color: #8a6d1a; border-left: 4px solid #d4a843; }
+.day-3 { background: linear-gradient(135deg, #e6f7f6, #f0fdfa); color: #1a6e5a; border-left: 4px solid #3a7d8c; }
+
+/* ===== INFO CARDS ===== */
+.info-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+  box-shadow: 0 8px 22px rgba(26,26,46,0.04);
+}
+.info-card .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.info-tip {
+  background: linear-gradient(135deg, rgba(254,240,242,0.98), rgba(255,248,240,0.98));
+  border: 1px solid #efcfd0;
+}
+.info-warn {
+  background: linear-gradient(135deg, rgba(255,247,238,0.98), rgba(255,251,244,0.98));
+  border: 1px solid #f3d8c6;
+}
+
+/* ===== FOOD CARDS ===== */
+.food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+.food-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid #e7edf3;
+  font-size: 12.5px;
+  box-shadow: 0 8px 20px rgba(26,26,46,0.035);
+}
+.food-item .name { font-weight: 650; color: #1a1a2e; }
+.food-item .price { color: #c41e3a; font-weight: 500; font-size: 12px; margin-left: 6px; }
+.food-item .desc { color: #666; font-size: 12px; margin-top: 2px; }
+
+/* ===== HOTEL CARDS ===== */
+.hotel-list { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+.hotel-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  background: rgba(255,255,255,0.72);
+  box-shadow: 0 8px 20px rgba(26,26,46,0.035);
+}
+.hotel-item .thumb {
+  width: 90px;
+  min-height: 72px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hotel-item .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.hotel-item .info { flex: 1; }
+.hotel-item .info h4 { font-size: 14px; font-weight: 650; color: #1a1a2e; margin-bottom: 2px; }
+.hotel-item .info .price { color: #c41e3a; font-weight: 600; font-size: 13px; }
+.hotel-item .info .desc { font-size: 12px; color: #777; margin-top: 3px; line-height: 1.5; }
+
+/* ===== PHOTO SPOTS ===== */
+.spot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.spot-card {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6edf3;
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 8px 18px rgba(26,26,46,0.045);
+  transition: all 0.2s;
+}
+.spot-card:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(26,26,46,0.09); }
+.spot-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+.spot-body { padding: 10px 12px; }
+.spot-body .name { font-size: 13px; font-weight: 650; color: #1a1a2e; }
+.spot-body .tip { font-size: 11px; color: #999; margin-top: 2px; }
+
+/* ===== BUDGET ===== */
+.budget-list { margin: 12px 0; }
+.budget-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e8ecf0;
+  font-size: 13px;
+}
+.budget-row:last-child { border-bottom: none; }
+.budget-row .label { color: #555; }
+.budget-row .amount { font-weight: 600; color: #1a1a2e; }
+.budget-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 0;
+  font-size: 16px;
+  font-weight: 650;
+  color: #1a1a2e;
+  border-top: 2px solid #c41e3a;
+  margin-top: 4px;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; margin: 12px 0; }
+.checklist li {
+  font-size: 12.5px;
+  padding: 4px 0;
+  list-style: none;
+  color: #444;
+}
+.checklist li::before { content: '☐ '; color: var(--hero); font-weight: 650; }
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(26,26,46,0.08);
+}
+
+/* ===== TWO COL ===== */
+.two-col { display: flex; gap: 24px; }
+.two-col > div { flex: 1; }
+
+/* ===== SECTION TAGS ===== */
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.tag-new { background: #fef0f2; color: #8b1a2b; }
+.tag-hot { background: #fff7ed; color: #b85a1a; }
+.tag-deal { background: #e8f4ec; color: #35734a; }
+
+/* ===== TIPS SECTION ===== */
+.tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+.tip-box {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.tip-box strong { display: block; margin-bottom: 3px; font-size: 13px; color: #1a1a2e; }
+.tip-green { background: #f0faf5; border: 1px solid #d4ece0; }
+.tip-red { background: #fff5ef; border: 1px solid #f3d8c6; }
+
+/* ===== FOOTER ===== */
+.page-footer {
+  margin-top: 28px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #6b4a5a;
+  background: linear-gradient(135deg, rgba(254,240,242,0.85), rgba(255,248,240,0.75));
+  border: 1px solid var(--line);
+}
+
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; width: 210mm; min-height: 297mm; }
+}
+
+@media screen and (max-width: 860px) {
+  .page { width: calc(100vw - 24px); min-height: auto; margin: 12px auto; }
+  .cover { min-height: 100vh; }
+  .page-content { padding: 28px 18px 42px; }
+  .cover h1 { font-size: 44px; }
+  .cover-stats, .cover-route, .food-grid, .spot-grid, .tips-grid, .gallery { grid-template-columns: 1fr; }
+  .img-row, .two-col, .hotel-item { flex-direction: column; }
+  .hotel-item .thumb { width: 100%; height: 150px; }
+  table { font-size: 12px; }
+  th, td { padding: 9px 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1: COVER ===== -->
+<div class="page">
+  <div class="cover">
+    <img src="../images/nc-skyline.jpg" alt="">
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+      <div class="cover-badge">2026 · G225次 · 英雄城</div>
+
+      <h1>南昌<br><span>闺蜜3天2晚</span></h1>
+      <p class="subtitle">苏州出发 → 虹桥汇合 × 上海出发</p>
+
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <div class="l">日期</div>
+          <div class="v">6/19 — 6/21</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">G225 用时</div>
+          <div class="v">2h46min</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">人均预算</div>
+          <div class="v">¥1,500~2,200</div>
+        </div>
+        <div class="cover-stat">
+          <div class="l">定位</div>
+          <div class="v">火辣过瘾</div>
+        </div>
+      </div>
+
+      <div class="cover-tags">
+        <span>🏯 滕王阁夜宴</span>
+        <span>🌶 赣菜挑战</span>
+        <span>📸 闺蜜出片</span>
+        <span>🏛 英雄之城</span>
+        <span>🎡 南昌之星</span>
+      </div>
+
+      <div class="cover-route">
+        <div class="route-chip">
+          <span class="day">Day 01 · 周五</span>
+          <span class="route">抵达 · 万寿宫 · 滕王阁夜景</span>
+        </div>
+        <div class="route-chip">
+          <span class="day">Day 02 · 周六</span>
+          <span class="route">省博 · 南昌之星 · 秋水广场喷泉</span>
+        </div>
+        <div class="route-chip">
+          <span class="day">Day 03 · 周日</span>
+          <span class="route">绳金塔 · 八一广场 · 返程</span>
+        </div>
+      </div>
+
+      <p class="cover-quote">落霞与孤鹜齐飞 · 秋水共长天一色 · 拌粉瓦罐汤 · 英雄城火辣</p>
+    </div>
+
+    <p class="cover-footer">攻略版本 v2.0 · 2026年6月 · 配图：维基共享资源 / Unsplash</p>
+  </div>
+</div>
+
+<!-- ===== PAGE 2: TRANSPORT + DAY 1 ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">交通方案</div>
+    <h2>出发与碰头 — G225次</h2>
+
+    <table>
+      <tr><th style="width:25%;">出发地</th><th style="width:22%;">车次</th><th style="width:20%;">时间</th><th>说明</th></tr>
+      <tr>
+        <td><strong>苏州 → 虹桥</strong></td>
+        <td>G7101</td>
+        <td>7:47 → 8:19 · 32min</td>
+        <td>苏州站出发，二等座 ¥35。到虹桥后与闺蜜汇合，40分钟换乘缓冲</td>
+      </tr>
+      <tr>
+        <td><strong>上海虹桥 → 南昌西</strong></td>
+        <td><strong>G225</strong></td>
+        <td>9:00 → 11:46 · 2h46min</td>
+        <td>二等座 ¥403 · 一等座 ¥645。经杭州东（9:45到/9:48开），中午前到达</td>
+      </tr>
+      <tr>
+        <td>备选（苏州早班）</td>
+        <td>G7199</td>
+        <td>6:42 → 7:15 · 33min</td>
+        <td>苏州北站出发，更早更稳妥，二等座 ¥38。到虹桥后有充裕时间吃早饭</td>
+      </tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">💡</span>
+      <div><strong>碰头方案</strong> — 闺蜜从苏州站坐 G7101（7:47-8:19）到虹桥站，在虹桥站内与上海出发的姐妹汇合，一起乘 G225（9:00 发车）。<strong>建议提前在 12306 买好往返票</strong>，6月虽非大旺季但周末票也会紧张。</div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">🔁</span>
+      <div><strong>返程（Day 3）</strong> — 推荐 G238 南昌西 15:33 → 虹桥 18:22（2h49min），二等座 ¥371。闺蜜到虹桥后再换乘高铁回苏州（约 30min，¥35~46）。备选 G1378（15:38→19:20）或更晚的 G1372（16:22→19:44）。</div>
+    </div>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="../images/nc-tengwang-pavilion-2.jpg" alt="">
+        <div class="img-label">🏯 滕王阁 · 落霞与孤鹜齐飞</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-bayi-square.jpg" alt="">
+        <div class="img-label">🌉 赣江两岸 · 一江两岸天际线</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-star-ferriswheel.jpg" alt="">
+        <div class="img-label">🎡 南昌之星摩天轮 · 世界第三高</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">Day 1 · 6/19 周五</div>
+    <h2>抵达 + 老城烟火 + 滕王阁夜景</h2>
+
+    <div class="img-card">
+      <img src="../images/nc-tengwang-pavilion-1.jpg" alt="">
+      <div class="img-label">🏯 滕王阁夜景 · 19:00亮灯，赣江倒影绝美</div>
+    </div>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>9:00</td><td>虹桥站出发 → G225 高铁上聊天补觉</td><td>🚄 2h46min</td></tr>
+      <tr><td>11:46</td><td>到达南昌西站，打车/地铁去酒店（约30~40min）</td><td>🚇 地铁2号线</td></tr>
+      <tr><td>12:30</td><td>酒店办入住，放行李，休息片刻</td><td>🛏 轻松开局</td></tr>
+      <tr><td>13:30</td><td>🍜 <strong>珠宝街/万寿宫逛吃</strong> — 白糖糕 ¥1、油条包麻糍、糊羹。江西鲲茶（瓦罐奶茶）打卡</td><td>📸 老南昌味道</td></tr>
+      <tr><td>15:00</td><td>🏛 <strong>八一起义纪念馆</strong>（免费，公众号提前预约）— 沉浸式展陈，出口子弹墙超震撼</td><td>🎫 免费需约</td></tr>
+      <tr><td>16:30</td><td>🏮 <strong>万寿宫历史文化街区</strong> — 古风建筑群，文创店+许愿墙，慢慢逛慢慢拍</td><td>📸 古风出片</td></tr>
+      <tr><td>18:30</td><td>🍜 晚餐 — 万寿宫周边或「老三样」吃地道赣菜（油浸鱼、红烧鸡脚）</td><td>🌶 火辣开吃</td></tr>
+      <tr><td>19:30</td><td>🏯 <strong>滕王阁夜场</strong> — 19:00亮灯，夜景超震撼！能背《滕王阁序》免门票 ¥50</td><td>🌃 全天精华</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">📖</span>
+      <div><strong>背诵免票攻略：</strong> 滕王阁南门游客中心二楼智能背诵亭，每天 9:00-12:00 / 13:00-16:00。全文背诵 6 分钟内完成，60 分通关；段落背诵 2 分钟，80 分通关。截至2025年底已有 22 万人次通关！试试看，省 ¥50 还能发朋友圈 😎</div>
+    </div>
+
+    <div class="info-card info-warn">
+      <span class="icon">⚠️</span>
+      <div><strong>关于辣度：</strong> 江西菜的辣和四川湖南不一样——是"干辣""硬辣"！点菜一定说"微微微微辣"，别高估自己的耐辣能力。带包纸巾（擦汗用）。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 3: DAY 2 + DAY 3 ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">Day 2 · 6/20 周六</div>
+    <h2>🏛 省博寻宝 + 🎡 摩天轮 + 喷泉夜景</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="../images/nc-fireworks.jpg" alt="">
+        <div class="img-label">🏛 江西省博物馆 · 海昏侯金饼</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-star-ferriswheel.jpg" alt="">
+        <div class="img-label">🌃 秋水广场 · 亚洲最大音乐喷泉</div>
+      </div>
+    </div>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>自然醒</td><td>🏙 <strong>大士院街吃地道早餐</strong> — 小罗子汤店拌粉 ¥3.5 + 皮蛋肉饼汤 ¥4，南昌早餐顶配</td><td>🍜 本地人最爱</td></tr>
+      <tr><td>10:00</td><td>🏛 <strong>江西省博物馆</strong>（免费，公众号提前预约）— 海昏侯墓 378 块金饼、青铜器超震撼。周一闭馆，周六刚好！</td><td>🎫 免费需约</td></tr>
+      <tr><td>12:30</td><td>🍜 午餐 — 「老三样」或「羊子两室一厅」，地道赣菜（人均 ¥50~80）</td><td>🌶 辣但停不下</td></tr>
+      <tr><td>14:30</td><td>🎡 <strong>南昌之星摩天轮</strong>（门票 ¥50）— 世界第三高！高空俯瞰赣江，和闺蜜在最高点合影</td><td>📸 必打卡</td></tr>
+      <tr><td>16:30</td><td>☕ 红谷滩/绿地附近咖啡馆发呆 — 休息充电，为晚上喷泉做准备</td><td>🧘 中场休息</td></tr>
+      <tr><td>18:30</td><td>🍜 晚餐 — 红谷滩商圈吃一顿，推荐「恒茂汤店」27年老店，皮蛋肉饼汤+拌粉</td><td>🍲 老字号</td></tr>
+      <tr><td>19:30</td><td>⛲ <strong>秋水广场 · 音乐喷泉</strong>（免费）— 亚洲最大！19:30 / 20:30 各一场，配合赣江灯光秀</td><td>🌃 视觉盛宴</td></tr>
+      <tr><td>20:30</td><td>🌆 <strong>绿地双子塔 303 观景台</strong> — 俯瞰全城天际线，拍闺蜜大片（门票约 ¥80）</td><td>📸 夜景收官</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">🎫</span>
+      <div><strong>Day 2 关键提醒：</strong> 江西省博物馆务必提前在「江西省博物馆」公众号预约。周一闭馆不影响你们。海昏侯展厅是精华中的精华，378 块金饼闪瞎眼！秋水广场喷泉建议看 19:30 那场，看完还有时间去双子塔。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">Day 3 · 6/21 周日</div>
+    <h2>古塔祈福 + 城市地标 + 返程</h2>
+
+    <table>
+      <tr><th style="width:18%;">时间</th><th>行程</th><th style="width:18%;">备注</th></tr>
+      <tr><td>自然醒</td><td>退房，行李寄存前台；确认返程 G238（15:33）时间</td><td>😴 不赶早</td></tr>
+      <tr><td>10:00</td><td>🛕 <strong>绳金塔</strong>（免费）— 千年古塔，周边美食街吃遍南昌小吃。买煌上煌酱鸭作伴手礼</td><td>🎁 伴手礼</td></tr>
+      <tr><td>11:30</td><td>🌟 <strong>八一广场 + 江西省美术馆</strong> — 纪念碑前合影，美术馆建筑本身超好拍（俄式风格）</td><td>📸 城市地标</td></tr>
+      <tr><td>12:30</td><td>🍜 <strong>最后一顿南昌味</strong> — 推荐「周真真粉面」吃拌粉+瓦罐汤，或「万方圆」全频道拌粉</td><td>🍲 完美收官</td></tr>
+      <tr><td>13:30</td><td>🛍 顺路买杯洪都大拇指奶茶（江西版茶颜悦色，¥10~15），带上高铁喝</td><td>🧋 高性价比</td></tr>
+      <tr><td>14:15</td><td>回酒店取行李 → 南昌西站（地铁2号线约40min）</td><td>🚇 提前出发</td></tr>
+      <tr><td>15:33</td><td>G238 南昌西 → 上海虹桥（18:22到），各回各家 🏠</td><td>🚄 2h49min</td></tr>
+    </table>
+
+    <div class="info-card info-tip">
+      <span class="icon">💡</span>
+      <div><strong>Day 3 时间管理：</strong> 所有景点都在老城区，彼此距离近。绳金塔 → 八一广场打车 15 分钟。南昌西站离市区约 30~40 分钟地铁，留足时间。如果不想太赶，可选更晚的 G1372（16:22→19:44）。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 4: HOTELS + BACKUP ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">住宿</div>
+    <h2>推荐入住 · 双床房</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="../images/nc-tengwang-pavilion-2.jpg" alt="">
+        <div class="img-label">🏙 八一广场/中山路商圈 · 市中心首选</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-skyline.jpg" alt="">
+        <div class="img-label">🌃 红谷滩新区 · 现代繁华江景</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-montage.png" alt="">
+        <div class="img-label">🏮 滕王阁/万寿宫周边 · 人文江景</div>
+      </div>
+    </div>
+
+    <div class="hotel-list">
+      <div class="hotel-item">
+        <div class="thumb"><img src="../images/nc-star-ferriswheel.jpg" alt=""></div>
+        <div class="info">
+          <h4>全季酒店（八一广场店）</h4>
+          <div class="price">¥250~400 / 晚</div>
+          <div class="desc">连锁品牌品质稳定，步行到八一广场、万寿宫、八一起义纪念馆，楼下就是中山路商圈，逛吃超方便</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="../images/nc-bayi-square.jpg" alt=""></div>
+        <div class="info">
+          <h4>如家精选/如家商旅（万寿宫/滕王阁店）</h4>
+          <div class="price">¥200~350 / 晚</div>
+          <div class="desc">步行可达滕王阁和万寿宫，性价比高。地铁1号线沿线，到南昌西站直达</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="../images/nc-fireworks.jpg" alt=""></div>
+        <div class="info">
+          <h4>南昌喜来登酒店（红谷滩）</h4>
+          <div class="price">¥600~900 / 晚</div>
+          <div class="desc">江景房直面赣江+滕王阁，秋水广场步行可达，双子塔旁边。预算充足的首选</div>
+        </div>
+      </div>
+      <div class="hotel-item">
+        <div class="thumb"><img src="../images/nc-chaoyang-bridge.jpg" alt=""></div>
+        <div class="info">
+          <h4>汉庭/怡莱（南昌西站附近）</h4>
+          <div class="price">¥150~250 / 晚</div>
+          <div class="desc">预算之选！离高铁站近，地铁到市区20分钟。适合对住宿要求不高的姐妹</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">📍</span>
+      <div><strong>首选住八一广场/万寿宫/滕王阁周边</strong> — 老城核心区，所有 Day 1/3 景点步行或单车可达。红谷滩新区适合看江景和 Day 2 行程，但离老城稍远（地铁 20 分钟）。南昌西站附近最便宜但不方便逛吃，不推荐。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-number">备选玩法</div>
+    <h2>按天气和体力加餐</h2>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0;">
+      <div class="info-card info-tip">
+        <span class="icon">🏯</span>
+        <div>
+          <strong>杏花楼 / 佑民寺</strong> <span class="tag tag-new">悠闲之选</span><br>
+          江南园林+古寺，人少安静，黄墙红瓦超出片。如果 Day 3 不赶时间，绳金塔之后顺路过去逛 40 分钟。
+        </div>
+      </div>
+      <div class="info-card info-tip">
+        <span class="icon">🌿</span>
+        <div>
+          <strong>象湖湿地公园</strong> <span class="tag tag-deal">自然风光</span><br>
+          南昌版"西湖"，6 月荷花初开。适合喜欢自然风光的姐妹，但离市区稍远（打车约 25min），时间紧张可跳过。
+        </div>
+      </div>
+      <div class="info-card info-tip">
+        <span class="icon">🏙</span>
+        <div>
+          <strong>蛤蟆街夜市</strong> <span class="tag tag-hot">夜宵天堂</span><br>
+          南昌最地道的市井夜宵街，水煮、烤串、小龙虾。如果 Day 2 晚上还有精力，秋水广场看完喷泉可以顺路去。别太晚，注意安全。
+        </div>
+      </div>
+      <div class="info-card info-warn">
+        <span class="icon">🌧</span>
+        <div>
+          <strong>雨天 Plan B</strong><br>
+          江西省博物馆（室内）+ 绿地双子塔（室内观景）+ 万达/万象城逛街。南昌 6 月多雨，随身带伞。万寿宫和滕王阁小雨不影响，大雨则改室内为主。
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 5: FOOD ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">美食</div>
+    <h2>餐厅推荐 · 南昌味道全攻略</h2>
+
+    <div class="img-row">
+      <div class="img-card">
+        <img src="../images/nc-food-noodles.jpg" alt="">
+        <div class="img-label">🍜 南昌拌粉 · 筋道爽滑，3.5元一碗</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-food-soup.jpg" alt="">
+        <div class="img-label">🍲 瓦罐汤 · 炭火慢煨，鲜香浓郁</div>
+      </div>
+      <div class="img-card">
+        <img src="../images/nc-food-waguan.jpg" alt="">
+        <div class="img-label">🌶 赣菜经典 · 香辣入味，停不下来</div>
+      </div>
+    </div>
+
+    <!-- 早餐 -->
+    <h3>🌅 早餐 · 拌粉+瓦罐汤 = 南昌人的 DNA</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name">恒茂汤店·煨汤（广场东路店）⭐4.4</div>
+        <div class="desc">📍 广场东路 · 人均¥15 · 27年老店！炭火熬汤24小时不熄，皮蛋肉饼汤日销百份，拌粉日销500份。国庆客流暴涨272%🔥</div>
+      </div>
+      <div class="food-item">
+        <div class="name">小罗子汤店（大士院街）</div>
+        <div class="desc">📍 大士院街 · 人均¥10 · 本地人从小吃到大。拌粉 ¥3.5 + 皮蛋肉饼汤 ¥4，南昌早餐顶配！</div>
+      </div>
+      <div class="food-item">
+        <div class="name">周真真粉面</div>
+        <div class="desc">📍 连锁店 · 人均¥15 · 南昌拌粉连锁第一品牌，品质稳定，分店多。牛肉拌粉+墨鱼肉饼汤经典搭配</div>
+      </div>
+      <div class="food-item">
+        <div class="name">万方圆拌粉瓦罐汤</div>
+        <div class="desc">📍 连锁店 · 人均¥20 · 全频道拌粉（牛肚+牛肉+猪耳）超豪华，瓦罐汤品种全</div>
+      </div>
+    </div>
+
+    <!-- 正餐赣菜 -->
+    <h3>🌶 正餐 · 赣菜必吃榜</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name">老三样·旧时新味 ⭐必吃榜</div>
+        <div class="desc">📍 多店 · 人均¥50~80 · 2025大众点评必吃榜！油浸鱼（鱼皮脆鱼肉嫩）、红烧鸡脚（酥烂脱骨）、避风塘炸鸡翅。复古市井风装修，超出片</div>
+      </div>
+      <div class="food-item">
+        <div class="name">羊子两室一厅 ⭐必吃榜</div>
+        <div class="desc">📍 羊子巷 · 人均¥60~90 · 8900+评价！南昌老牌网红赣菜馆，本地人强推。螃蟹脚、啤酒鸭必点</div>
+      </div>
+      <div class="food-item">
+        <div class="name">毛毛饭店</div>
+        <div class="desc">📍 老城区 · 人均¥50 · 接地气的苍蝇馆子，藜蒿炒腊肉（南昌限定！）、红烧黄丫头。烟火气满分</div>
+      </div>
+      <div class="food-item">
+        <div class="name">老菜香烧菜馆</div>
+        <div class="desc">📍 老城区 · 人均¥50~70 · 南昌家常菜代表，红烧肉、粉蒸肉一绝。分量大，两个人少点几个菜</div>
+      </div>
+    </div>
+
+    <!-- 小吃夜宵 -->
+    <h3>🍢 市井灵魂 · 水煮 & 小吃</h3>
+    <div class="food-grid">
+      <div class="food-item">
+        <div class="name">羊子巷水煮 ⭐4.4</div>
+        <div class="desc">📍 师大南路 · 人均¥18 · 南昌水煮代表！八宝、猪血、脚板（油炸超酥脆）、凉拌藕片。水煮≠麻辣烫，南昌独有！</div>
+      </div>
+      <div class="food-item">
+        <div class="name">红灯笼水煮（羊子姐妹店）⭐4.1</div>
+        <div class="desc">📍 羊子巷 · 人均¥20 · 207条评价。和水煮姐妹店各有千秋，两碗不嫌多</div>
+      </div>
+      <div class="food-item">
+        <div class="name">珠宝街 · 小吃一条街</div>
+        <div class="desc">📍 万寿宫旁 · 人均¥20~30 · 白糖糕 ¥1/个、油条包麻糍、糊羹（福羹）、辣椒粑。边走边吃，闺蜜扫街天堂</div>
+      </div>
+      <div class="food-item">
+        <div class="name">蛤蟆街夜市</div>
+        <div class="desc">📍 老城区 · 人均¥30~60 · 南昌最地道夜宵街。小龙虾、烤串、水煮、炒粉。烟火气顶满，注意安全</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <h3>🧋 必喝饮品</h3>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">洪都大拇指奶茶</div>
+          <div class="desc">江西版"茶颜悦色"！¥10~15 一杯，性价比炸裂。推荐幽兰拿铁、声声乌龙</div>
+        </div>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">江西鲲茶（瓦罐奶茶）</div>
+          <div class="desc">万寿宫附近，瓦罐装奶茶超有仪式感。拍照神器！¥15~20</div>
+        </div>
+      </div>
+      <div>
+        <h3>🎁 伴手礼</h3>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">煌上煌酱鸭</div>
+          <div class="desc">南昌本土品牌，连锁店随处可见。酱鸭、鸭脖、鸭舌，真空包装方便携带</div>
+        </div>
+        <div class="food-item" style="margin-bottom:6px;">
+          <div class="name">江西米粉/辣椒酱</div>
+          <div class="desc">超市或特产店买干米粉+本地辣酱，回家自己复刻南昌拌粉</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card info-warn">
+      <span class="icon">🌶</span>
+      <div><strong>江西辣度分级（认真脸）：</strong> "微辣"≈上海中辣，"中辣"≈上海重辣，"重辣"≈挑战极限。第一次吃赣菜务必说"微微微微辣"！推荐配「洪都大拇指」奶茶解辣。肠胃弱的姐妹带蒙脱石散。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 6: PHOTO SPOTS + BUDGET ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">拍照</div>
+    <h2>闺蜜机位 TOP 8</h2>
+
+    <div class="img-card">
+      <img src="../images/nc-tengwang-stage.jpg" alt="">
+      <div class="img-label">📷 滕王阁 · 赣江边 · 每一帧都是国风大片</div>
+    </div>
+
+    <div class="spot-grid">
+      <div class="spot-card">
+        <img src="../images/nc-tengwang-pavilion-1.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏯 滕王阁 · 夜场</div>
+          <div class="tip">19:00亮灯 · 江边仰拍全阁+倒影 · 穿汉服/新中式绝美</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-tengwang-pavilion-2.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏮 万寿宫 · 古风街巷</div>
+          <div class="tip">下午4-5点光影最好 · 红灯笼+青砖墙+许愿墙</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-star-ferriswheel.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🎡 南昌之星摩天轮</div>
+          <div class="tip">最高点拍赣江全景 · 下午光线好 · 舱内逆光剪影</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-chaoyang-bridge.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">⛲ 秋水广场 · 喷泉</div>
+          <div class="tip">19:30场次 · 喷泉+灯光秀+赣江对岸天际线同框</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-skyline.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🌟 八一广场 · 纪念碑</div>
+          <div class="tip">上午顺光 · 美术馆俄式建筑做背景 · 城市封面照</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-bayi-square.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🛕 绳金塔</div>
+          <div class="tip">千年古塔+周边仿古街 · 上午人少 · 大成殿红墙好拍</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-star-ferriswheel.jpg" alt="">
+        <div class="spot-body">
+          <div class="name">🏛 江西省美术馆</div>
+          <div class="tip">俄式建筑外观本身就是打卡地 · 八一广场对面拍全景</div>
+        </div>
+      </div>
+      <div class="spot-card">
+        <img src="../images/nc-montage.png" alt="">
+        <div class="spot-body">
+          <div class="name">🌉 绿地双子塔 303</div>
+          <div class="tip">303米高空俯瞰 · 日落前30分钟到 · 城市天际线大片</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card info-tip">
+      <span class="icon">👗</span>
+      <div><strong>穿搭建议：</strong> 南昌最适合<strong>新中式/汉服/国风</strong>穿搭！滕王阁+万寿宫古风场景完美适配。日常推荐浅色连衣裙+帆布鞋。6月南昌较热（30℃+），带防晒霜+遮阳帽+墨镜。一定穿平底鞋（景点石板路多）。</div>
+    </div>
+
+    <div class="info-card info-warn">
+      <span class="icon">☔</span>
+      <div><strong>雨天拍照 Plan B：</strong> 省博物馆室内拍文物、绿地双子塔拍雨雾中的城市、万象城/万达室内。万寿宫的回廊雨天也出片（青石板+雨水反光 = 氛围感）。</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <div class="section-number">预算</div>
+        <h2>费用估算</h2>
+        <div class="budget-list">
+          <div class="budget-row"><span class="label">🚄 往返高铁</span><span class="amount">¥750 ~ 900</span></div>
+          <div class="budget-row"><span class="label">🏨 住宿2晚（双床房平摊）</span><span class="amount">¥250 ~ 500</span></div>
+          <div class="budget-row"><span class="label">🍜 吃饭3天</span><span class="amount">¥300 ~ 500</span></div>
+          <div class="budget-row"><span class="label">🎫 门票/展馆</span><span class="amount">¥100 ~ 200</span></div>
+          <div class="budget-row"><span class="label">🚕 市内交通</span><span class="amount">¥100 ~ 150</span></div>
+          <div class="budget-total"><span>舒适合计（人均）</span><span>¥1,500 ~ 2,200</span></div>
+        </div>
+        <p style="font-size:11px;color:#999;margin-top:4px;">按舒适版估算 · 不含购物 · 高铁¥403×2+苏州¥35×2=¥876（基础交通）。省钱版可压到 ¥1,200 起</p>
+      </div>
+      <div>
+        <div class="section-number">清单</div>
+        <h2>行前准备</h2>
+        <ul class="checklist">
+          <li>身份证</li>
+          <li>防晒霜 ⭐</li>
+          <li>帽子 + 墨镜</li>
+          <li>遮阳伞（晴雨两用）</li>
+          <li>平底鞋</li>
+          <li>充电宝</li>
+          <li>肠胃药 ⭐</li>
+          <li>纸巾/湿巾</li>
+          <li>一次性雨衣</li>
+          <li>学生证（有的话）</li>
+        </ul>
+        <div style="margin-top:16px;">
+          <div class="section-number">预约</div>
+          <h2>提前搞定</h2>
+          <ul class="checklist">
+            <li>G225 往返票 🎫</li>
+            <li>G7101 苏州→虹桥</li>
+            <li>酒店预订</li>
+            <li>江西省博物馆预约</li>
+            <li>八一起义纪念馆预约</li>
+            <li>下载鹭鹭行APP（地铁）</li>
+            <li>背《滕王阁序》😂</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PAGE 7: GALLERY + TIPS ===== -->
+<div class="page">
+  <div class="page-content">
+
+    <div class="section-number">Gallery</div>
+    <h2>南昌实感预览</h2>
+    <p style="font-size:13px;color:#888;margin-bottom:4px;letter-spacing:0.3px;">提前感受英雄城的魅力——一半是滕王阁的诗意，一半是拌粉瓦罐汤的烟火</p>
+
+    <div class="gallery">
+      <img src="../images/nc-skyline.jpg" alt="南昌">
+      <img src="../images/nc-tengwang-pavilion-2.jpg" alt="滕王阁">
+      <img src="../images/nc-tengwang-pavilion-1.jpg" alt="万寿宫">
+      <img src="../images/nc-tengwang-stage.jpg" alt="赣江">
+      <img src="../images/nc-star-ferriswheel.jpg" alt="南昌之星">
+      <img src="../images/nc-food-noodles.jpg" alt="南昌美食">
+      <img src="../images/nc-food-soup.jpg" alt="瓦罐汤">
+      <img src="../images/nc-food-noodles.jpg" alt="拌粉">
+      <img src="../images/nc-skyline.jpg" alt="秋水广场">
+      <img src="../images/nc-bayi-square.jpg" alt="南昌夜景">
+    </div>
+    <p style="font-size:10px;color:#bbb;text-align:right;margin-top:4px;">配图：Wikimedia Commons（CC BY-SA）（南昌实拍图 · 来源：Wikimedia Commons）</p>
+
+    <div class="divider"></div>
+
+    <div class="section-number">提醒</div>
+    <h2>南昌出行特别提醒</h2>
+
+    <div class="tips-grid">
+      <div class="tip-box tip-red">
+        <strong>1️⃣ 提前买票！</strong>
+        G225 是热门车次，6/19 周五出发+6/21 周日返程，往返票尽早锁定。闺蜜的苏州→虹桥 G7101 也一起买了。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>2️⃣ 赣菜辣度警告！</strong>
+        江西辣和川湘不同——干辣直给！第一次吃务必"微微微微辣"，别高估自己。带肠胃药！
+      </div>
+      <div class="tip-box tip-green">
+        <strong>3️⃣ 防晒防暑</strong>
+        6月南昌30℃+，湿度大，中午容易闷热。上午+傍晚活动，中午找博物馆/商场避暑。带伞！
+      </div>
+      <div class="tip-box tip-green">
+        <strong>4️⃣ 博物馆提前约！</strong>
+        江西省博物馆（周一闭馆，不影响）和八一起义纪念馆都需提前在公众号预约。到场再约很可能没号。
+      </div>
+      <div class="tip-box tip-red">
+        <strong>5️⃣ 背诵免票攻略</strong>
+        滕王阁 ¥50 门票可通过背诵《滕王阁序》免掉。南门游客中心二楼智能背诵亭，9:00-12:00/13:00-16:00。花半小时背一下，省 ¥50！
+      </div>
+      <div class="tip-box tip-red">
+        <strong>6️⃣ 南昌西站≠南昌站！</strong>
+        G225 到的是南昌西站（红谷滩新区），离老城区约 30~40 分钟地铁。别跑错站！返程同理，从南昌西站出发。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>7️⃣ 交通建议</strong>
+        下载「鹭鹭行」APP 或支付宝扫码乘地铁。地铁 1/2 号线覆盖核心景点。老城区景点密集，共享单车很方便。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>8️⃣ 南昌物价友好</strong>
+        拌粉 ¥3.5、瓦罐汤 ¥4、水煮 ¥18、赣菜人均 ¥60。整体消费比上海苏州低不少，放开吃！
+      </div>
+      <div class="tip-box tip-red">
+        <strong>9️⃣ 水煮≠麻辣烫</strong>
+        南昌水煮是卤汤慢煮+自选食材，和麻辣烫风味完全不同。一定试试脚板（油炸豆制品），酥脆到惊艳。
+      </div>
+      <div class="tip-box tip-green">
+        <strong>🔟 南昌人很热情</strong>
+        问路、问吃的、问怎么玩，南昌人会很热情告诉你。别不好意思开口。
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="page-footer">
+      <p style="font-size:15px;font-weight:600;color:#8b1a2b;margin-bottom:4px;">
+        🏯 祝你和闺蜜在南昌度过一段火辣又难忘的假期！
+      </p>
+      <p style="font-size:12px;color:#888;">
+        拌粉瓦罐汤开启每一天 · 滕王阁夜宴惊艳朋友圈 · 英雄城的烟火气 · 和闺蜜一起辣到笑 💕
+      </p>
+      <p style="font-size:10px;color:#ccc;margin-top:12px;">
+        攻略版本 v2.0 · 2026年6月整理 · G225次上海虹桥→南昌西 · 配图：维基共享资源 / Unsplash
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
